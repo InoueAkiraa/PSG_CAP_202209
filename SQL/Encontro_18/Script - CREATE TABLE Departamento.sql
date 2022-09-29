@@ -1,0 +1,7 @@
+CREATE TABLE Departamento(
+	DepartamentoId INT NOT NULL IDENTITY(1,1),
+	Descricao VARCHAR(MAX) NOT NULL,
+	DataInsert DATETIME NULL DEFAULT GETDATE(),
+	CONSTRAINT PK_Departamento PRIMARY KEY (DepartamentoId)
+)
+GO
