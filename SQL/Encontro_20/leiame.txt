@@ -1,0 +1,2 @@
+Nesse encontro foi corrigido o desafio 24 e foi mostrado uma forma alternativa de resolvé-lo utilizando uma VIEW. 
+Também foi iniciado estudos sobre Cursor, o qual tem uma função semelhante ao FOR
