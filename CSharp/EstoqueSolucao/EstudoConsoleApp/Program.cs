@@ -15,15 +15,21 @@ public class Program
         //ExecutarExemplo004();
         //ExecutarExemplo005();
         //Desafio001.Executar();
+        //Desafio001v2.Executar();
         //Desafio002.Executar();
+        //Desafio002v2.Executar();
         //Desafio003.Executar();
+        //Desafio003v2.Executar();
         //Desafio004.Executar();
+        //Desafio004v2.Executar();
         //Desafio005.Executar();
+        Desafio005v2.Executar();
         //Desafio006.Executar();
+        //Desafio006v2.Executar();
         //Desafio007.Executar();
         //Desafio008.Executar();
         //Desafio009.Executar();
-        Desafio010.Executar();
+        //Desafio010.Executar();
     }
 
     private static void ExecutarExemplo001()
