@@ -40,7 +40,7 @@ namespace EstudoConsoleApp.Desafios
             }
 
 
-            media = ((nota1 + nota2) / 2);
+            media = ((nota1 + nota2) / 2); //CORRIGIR PARA NÃO REALIZAR ISSO ATÉ VALIDAR
             Console.WriteLine("A média do aluno foi {0}", media);
         }
     }
