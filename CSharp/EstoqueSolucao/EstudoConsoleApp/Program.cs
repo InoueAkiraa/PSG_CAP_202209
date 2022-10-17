@@ -3,6 +3,8 @@
 using System;
 
 using EstudoConsoleApp.Aulas;
+using EstudoConsoleApp.Desafios;
+
 public class Program
 {
     public static void Main(string[] args)
@@ -11,7 +13,17 @@ public class Program
         //ExecutarExemplo002();
         //ExecutarExemplo003();
         //ExecutarExemplo004();
-        ExecutarExemplo005();
+        //ExecutarExemplo005();
+        //Desafio001.Executar();
+        //Desafio002.Executar();
+        //Desafio003.Executar();
+        //Desafio004.Executar();
+        //Desafio005.Executar();
+        //Desafio006.Executar();
+        //Desafio007.Executar();
+        //Desafio008.Executar();
+        //Desafio009.Executar();
+        Desafio010.Executar();
     }
 
     private static void ExecutarExemplo001()
