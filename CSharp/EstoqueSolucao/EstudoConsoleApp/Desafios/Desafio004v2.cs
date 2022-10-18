@@ -14,16 +14,17 @@ namespace EstudoConsoleApp.Desafios
     {
         public static void Executar()
         {
-            int numero;
+            double numero;
             Console.WriteLine("Informe qualquer número: ");
-            if (Int32.TryParse(Console.ReadLine(), out numero) == false)
+            if (Double.TryParse(Console.ReadLine(), out numero) == false)
             {
                 Console.WriteLine("Favor informar apenas números.");
+                return;
             }
 
-            int dobro = numero * 2;
-            int triplo = numero * 3;
-            double raiz = Math.Sqrt(Convert.ToDouble(numero));
+            double dobro = numero * 2;
+            double triplo = numero * 3;
+            double raiz = Math.Sqrt(numero);
             Console.WriteLine("Para o número {0}:", numero);
             Console.WriteLine("\tO dobro do número informado é {0}", dobro);
             Console.WriteLine("\tO triplo do número informado é {0}", triplo);

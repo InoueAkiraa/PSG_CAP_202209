@@ -14,12 +14,29 @@ namespace EstudoConsoleApp.Desafios
     {
         public static void Executar()
         {
-            Console.WriteLine("Informe o dia: ");
-            int dia = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Informe o mês: ");
-            int mes = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Informe o ano: ");
-            int ano = Convert.ToInt32(Console.ReadLine());
+            int dia, mes, ano;
+            Console.Write("Informe o dia: ");
+            if (Int32.TryParse(Console.ReadLine(), out dia) == false)
+            {
+                Console.WriteLine("Favor informar apenas números para o dia.");
+                return;
+            }
+            
+
+            Console.Write("Informe o mês: ");
+            if (Int32.TryParse(Console.ReadLine(), out mes) == false) 
+            {
+                Console.WriteLine("Favor informar apenas números para o mês.");
+                return;
+            }
+
+            Console.Write("Informe o ano: ");
+            if (Int32.TryParse(Console.ReadLine(), out ano) == false)
+            {
+                Console.WriteLine("Favor informar apenas números para o ano.");
+                return;
+            }
+
             Console.WriteLine();
 
             DateTime data = new DateTime(ano, mes, dia);

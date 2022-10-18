@@ -19,11 +19,12 @@ namespace EstudoConsoleApp.Desafios
             if (Double.TryParse(Console.ReadLine(), out nota1) == false)
             {
                 Console.WriteLine("Favor informar apenas números.");
+                return;
             }
 
             if ((nota1 < 0) && (nota1 > 10))
             {
-                Console.WriteLine("Favor informar valores positivos para a primeira nota.");
+                Console.WriteLine("Favor informar valores entre 0 e 10 para a primeira nota.");
                 return;
             }
 
@@ -31,17 +32,18 @@ namespace EstudoConsoleApp.Desafios
             if (Double.TryParse(Console.ReadLine(), out nota2) == false)
             {
                 Console.WriteLine("Favor informar apenas números.");
+                return;
             }
 
             if ((nota2 < 0) && (nota2 > 10))
             {
-                Console.WriteLine("Favor informar valores positivos para a segunda nota.");
+                Console.WriteLine("Favor informar valores entre 0 e 10 para a segunda nota.");
                 return;
             }
-
-
-            media = ((nota1 + nota2) / 2); //CORRIGIR PARA NÃO REALIZAR ISSO ATÉ VALIDAR
+            
+            media = ((nota1 + nota2) / 2); 
             Console.WriteLine("A média do aluno foi {0}", media);
+
         }
     }
 }

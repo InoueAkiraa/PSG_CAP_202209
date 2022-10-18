@@ -19,6 +19,7 @@ namespace EstudoConsoleApp.Desafios
             if (Double.TryParse(Console.ReadLine(), out metros) == false)
             {
                 Console.WriteLine("Favor informar apenas números.");
+                return;
             }
             else
             {

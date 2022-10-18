@@ -13,32 +13,38 @@ namespace EstudoConsoleApp.Desafios
     {
         public static void Executar()
         {
-            int num1, num2;
+            double num1, num2;
 
             Console.Write("Informe o primeiro número: ");
-            if (Int32.TryParse(Console.ReadLine(), out num1) == false) // VAI TENTAR REALIZAR A CONVERSÃO PARA INT32
+            if (Double.TryParse(Console.ReadLine(), out num1) == false) // VAI TENTAR REALIZAR A CONVERSÃO PARA INT32
             {                                                          // CASO NÃO CONSIGA, EXIBIRÁ MENSAGEM DE ERRO
                 Console.WriteLine("Favor informar apenas números");
                 return;
             }
 
+            if (num1 < 0)
+            {
+                Console.WriteLine("Favor informar apenas números positivos.");
+                return;
+            }
+
             Console.Write("Informe o segundo número: ");
-            if (Int32.TryParse(Console.ReadLine(), out num2) == false)
+            if (Double.TryParse(Console.ReadLine(), out num2) == false)
             {
                 Console.WriteLine("Favor informar apenas números");
                 return;
-            }    
-
-            int soma = num1 + num2;
-            if (soma < 0)
+            }  
+            
+            if (num2 < 0)
             {
                 Console.WriteLine("Favor informar apenas números positivos.");
+                return;
             }
-            else
-            {
-                Console.WriteLine();
-                Console.Write("A soma de {0} com {1} é igual a {2}.", num1, num2, soma);
-            }
+
+            double soma = num1 + num2;
+
+            Console.WriteLine();
+            Console.Write("A soma de {0} com {1} é igual a {2}.", num1, num2, soma);
         }
     }
 }
