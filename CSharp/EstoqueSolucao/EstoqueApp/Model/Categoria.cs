@@ -8,7 +8,7 @@ namespace EstoqueApp.Model
 {
     public class Categoria : BaseEstoque
     {
-        public Categoria()
+        public Categoria() : base()
         {
         }
 

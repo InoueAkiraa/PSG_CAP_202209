@@ -10,9 +10,8 @@ namespace EstoqueApp.Model
     {
         private int codigoCategoria;        
         public int CodigoCategoria { get => this.codigoCategoria; set => this.codigoCategoria = value; }
-        public Subcategoria(int codigoCategoria)
+        public Subcategoria() : base()
         {
-            this.codigoCategoria = codigoCategoria;
         }
 
         public Subcategoria(int codigo, string descricao, bool ativo, DateTime dataInclusao, int codigoCategoria)
