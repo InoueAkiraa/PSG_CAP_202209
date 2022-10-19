@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EstoqueApp.Model
+{
+    public class Produto : BaseEstoque
+    {
+        private int codigoSubcategoria;
+
+        public int CodigoSubcategoria { get => this.codigoSubcategoria; set => this.codigoSubcategoria = value; }
+        public Produto(int codigoSubcategoria)
+        {
+            this.codigoSubcategoria = codigoSubcategoria;
+        }
+        public Produto(int codigo, string descricao, bool ativo, DateTime dataInclusao, int codigoSubcategoria) : base(codigo, descricao, ativo, dataInclusao)
+        {
+            this.codigoSubcategoria = codigoSubcategoria;
+        }
+    }
+}
