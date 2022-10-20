@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EstoqueApp.Model.RH.BasePessoa">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQACAAoAIAACACIEAAECBACBAAAAgAAAAAEAAAEBAgA=</HashCode>
+      <FileName>Model\RH\BasePessoa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EstoqueApp.Model.RH.BaseFisica">
+    <Position X="2.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAEAIAABACAAAAAIAAAACAAAA=</HashCode>
+      <FileName>Model\RH\BaseFisica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EstoqueApp.Model.RH.BaseJuridica">
+    <Position X="5.75" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAACgBAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Model\RH\BaseJuridica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EstoqueApp.Model.RH.Colaborador">
+    <Position X="2.75" Y="10.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAAKAEAAigAAAYIBAAECgARBQIAAAUABACAAAQRAAAA=</HashCode>
+      <FileName>Model\RH\Colaborador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EstoqueApp.Model.RH.Usuario">
+    <Position X="0.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAIgAAAEIAAACAAAIAIAACAAAAAAAAAQAAgAEAA=</HashCode>
+      <FileName>Model\RH\Usuario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Colaborador" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

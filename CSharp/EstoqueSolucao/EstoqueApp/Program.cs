@@ -1,6 +1,6 @@
 ﻿using System;
 
-using EstoqueApp.Model;
+using EstoqueApp.Model.Estoque;
 
 namespace EstoqueApp
 {
