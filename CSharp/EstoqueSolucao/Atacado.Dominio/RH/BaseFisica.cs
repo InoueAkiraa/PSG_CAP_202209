@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EstoqueApp.Model.RH
+namespace Atacado.Dominio.RH
 {
     public abstract class BaseFisica : BasePessoa
     {

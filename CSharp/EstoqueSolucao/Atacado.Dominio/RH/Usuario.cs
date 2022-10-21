@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EstoqueApp.Model.RH
+namespace Atacado.Dominio.RH
 {
     public class Usuario
     {
@@ -19,8 +19,7 @@ namespace EstoqueApp.Model.RH
         public Colaborador Colaborador { get => colaborador; set => colaborador = value; }
 
         public Usuario() : base()
-        {
-        }
+        { }
 
         public Usuario(string login, string senha, string permissao)
         {
@@ -28,17 +27,5 @@ namespace EstoqueApp.Model.RH
             this.senha = senha;
             this.permissao = permissao;
         }
-        
-        public void EditarPerfil()
-        { }
-
-        public void AlterarSenha()
-        { }
-
-        public void CriarUsuario()
-        { }
-
-        public void ApagarUsuario()
-        { }
     }
 }

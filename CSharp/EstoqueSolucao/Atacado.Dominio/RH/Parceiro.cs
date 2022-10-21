@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EstoqueApp.Model.RH
+namespace Atacado.Dominio.RH
 {
     public class Parceiro : BaseJuridica
     {
@@ -28,14 +28,5 @@ namespace EstoqueApp.Model.RH
             this.comissao = comissao;
             this.setor = setor;
         }
-
-        public void Cadastrar()
-        { }
-
-        public void Bloquear()
-        { }
-
-        public void Excluir()
-        { }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EstoqueApp.Model.RH
+namespace Atacado.Dominio.RH
 {
     public abstract class BasePessoa
     {
@@ -19,7 +19,7 @@ namespace EstoqueApp.Model.RH
             this.endereco = new Endereco();
         }
 
-        protected BasePessoa(int id) : this()
+        public BasePessoa(int id) : this()
         {
             this.id = id;
         }
