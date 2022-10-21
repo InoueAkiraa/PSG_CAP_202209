@@ -18,13 +18,17 @@ namespace EstoqueApp.Model.RH
         public string Permissao { get => permissao; set => permissao = value; }
         public Colaborador Colaborador { get => colaborador; set => colaborador = value; }
 
+        public Usuario() : base()
+        {
+        }
+
         public Usuario(string login, string senha, string permissao)
         {
             this.login = login;
             this.senha = senha;
             this.permissao = permissao;
         }
-
+        
         public void EditarPerfil()
         { }
 
