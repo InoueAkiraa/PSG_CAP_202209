@@ -18,9 +18,9 @@ namespace Atacado.Dominio.RH
         {
         }
 
-        public Prestador(int id, string cnpj, string inscricaoEstaduao, DateTime fundacao, string nomeFantasia, 
+        public Prestador(int id, string cnpj, string inscricaoEstadual, DateTime fundacao, string nomeFantasia, 
             string razaoSocial, string emailCorporativo, DateOnly dataContratoInicial, DateOnly dataContratoFinal) 
-            : base(id, cnpj, inscricaoEstaduao, fundacao, nomeFantasia, razaoSocial, emailCorporativo)
+            : base(id, cnpj, inscricaoEstadual, fundacao, nomeFantasia, razaoSocial, emailCorporativo)
         {
             this.dataContratoInicial = dataContratoInicial;
             this.dataContratoFinal = dataContratoFinal;

@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="RH\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Atacado.Dominio\Atacado.Dominio.csproj" />
   </ItemGroup>
 

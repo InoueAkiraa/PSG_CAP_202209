@@ -20,9 +20,9 @@ namespace Atacado.Dominio.RH
         {
         }
 
-        public Parceiro(int id, string cnpj, string inscricaoEstaduao, 
+        public Parceiro(int id, string cnpj, string inscricaoEstadual, 
             DateTime fundacao, string nomeFantasia, string razaoSocial, string emailCorporativo, double desempenho, double comissao, string setor) 
-            : base(id, cnpj, inscricaoEstaduao, fundacao, nomeFantasia, razaoSocial, emailCorporativo)
+            : base(id, cnpj, inscricaoEstadual, fundacao, nomeFantasia, razaoSocial, emailCorporativo)
         {
             this.desempenho = desempenho;
             this.comissao = comissao;

@@ -29,5 +29,28 @@ namespace Atacado.DB.FakeDB.Estoque
         {
         }
 
+        public Categoria AddCategoria(Categoria instancia)
+        {
+            int novaChave = this.Categorias.Count + 1;
+            instancia.Codigo = novaChave;
+            this.Categorias.Add(instancia);
+            return instancia;
+        }
+
+        public Subcategoria AddSubcategoria(Subcategoria instancia)
+        {
+            int novaChave = this.Subcategorias.Count + 1;
+            instancia.Codigo = novaChave;
+            this.Subcategorias.Add(instancia);
+            return instancia;
+        }
+
+        public Produto AddProduto(Produto instancia)
+        {
+            int novaChave = this.Produtos.Count + 1;
+            instancia.Codigo = novaChave;
+            this.Produtos.Add(instancia);
+            return instancia;
+        }
     }
 }

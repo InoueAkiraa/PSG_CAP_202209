@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Atacado.Repositorio.Base
 {
-    public abstract class BaseRepositorio<TClasse> where TClasse : class
+    public abstract class BaseRepositorio<TDominio> where TDominio : class
     {
-        public abstract TClasse Create(TClasse instancia);
+        public abstract TDominio Create(TDominio instancia);
 
-        public abstract TClasse Read(int chave);
+        public abstract TDominio Read(int chave);
 
-        public abstract List<TClasse> Read();
+        public abstract List<TDominio> Read();
 
-        public abstract TClasse Update(TClasse instancia);
+        public abstract TDominio Update(TDominio instancia);
 
-        public abstract TClasse Delete(int chave);
+        public abstract TDominio Delete(int chave);
 
-        public abstract TClasse Delete(TClasse instancia);
+        public abstract TDominio Delete(TDominio instancia);
     }
 }

@@ -8,11 +8,13 @@ namespace Atacado.Dominio.RH
 {
     public class Usuario
     {
+        private int codigo;
         private string login;
         private string senha;
         private string permissao;
         private Colaborador colaborador;
         
+        public int Codigo { get => codigo; set => codigo = value; }
         public string Login { get => login; set => login = value; }
         public string Senha { get => senha; set => senha = value; }
         public string Permissao { get => permissao; set => permissao = value; }
@@ -21,11 +23,13 @@ namespace Atacado.Dominio.RH
         public Usuario() : base()
         { }
 
-        public Usuario(string login, string senha, string permissao)
+        public Usuario(int codigo, string login, string senha, string permissao)
         {
+            this.codigo = codigo;
             this.login = login;
             this.senha = senha;
             this.permissao = permissao;
+            
         }
     }
 }

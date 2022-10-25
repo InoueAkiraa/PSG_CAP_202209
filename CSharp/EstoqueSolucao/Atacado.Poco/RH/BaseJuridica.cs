@@ -9,14 +9,14 @@ namespace Atacado.Poco.RH
     public abstract class BaseJuridica : BasePessoa
     {
         protected string cnpj;
-        protected string inscricaoEstaduao;
+        protected string inscricaoEstadual;
         protected DateTime fundacao;
         protected string nomeFantasia;
         protected string razaoSocial;
         protected string emailCorporativo;
 
         public string Cnpj { get => cnpj; set => cnpj = value; }
-        public string InscricaoEstaduao { get => inscricaoEstaduao; set => inscricaoEstaduao = value; }
+        public string InscricaoEstaduao { get => inscricaoEstadual; set => inscricaoEstadual = value; }
         public DateTime Fundacao { get => fundacao; set => fundacao = value; }
         public string NomeFantasia { get => nomeFantasia; set => nomeFantasia = value; }
         public string RazaoSocial { get => razaoSocial; set => razaoSocial = value; }
