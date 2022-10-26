@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace Atacado.Poco.Estoque
 {
 
-    public class Categoria : BaseEstoque
+    public class CategoriaPoco : BaseEstoque
     {
-        public Categoria() : base()
+        public CategoriaPoco() : base()
         { }
 
-        public Categoria(int codigo, string descricao, bool ativo, DateTime dataInclusao)
+        public CategoriaPoco(int codigo, string descricao, bool ativo, DateTime dataInclusao)
             : base(codigo, descricao, ativo, dataInclusao)
         { }
 
