@@ -21,7 +21,8 @@ namespace Atacado.Dominio.RH
         }
 
         public Parceiro(int id, string cnpj, string inscricaoEstadual, 
-            DateTime fundacao, string nomeFantasia, string razaoSocial, string emailCorporativo, double desempenho, double comissao, string setor) 
+            DateTime fundacao, string nomeFantasia, string razaoSocial, 
+            string emailCorporativo, double desempenho, double comissao, string setor) 
             : base(id, cnpj, inscricaoEstadual, fundacao, nomeFantasia, razaoSocial, emailCorporativo)
         {
             this.desempenho = desempenho;
