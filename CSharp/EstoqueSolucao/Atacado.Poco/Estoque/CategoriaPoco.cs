@@ -11,11 +11,5 @@ namespace Atacado.Poco.Estoque
     {
         public CategoriaPoco() : base()
         { }
-
-        public CategoriaPoco(int codigo, string descricao, bool ativo, DateTime dataInclusao)
-            : base(codigo, descricao, ativo, dataInclusao)
-        { }
-
-
     }
 }

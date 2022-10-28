@@ -28,20 +28,39 @@ namespace Atacado.Servico.Estoque
 
         public override List<CategoriaPoco> Browse()
         {
-            List<Categoria> lista = this.repo.Read();
-            List<CategoriaPoco> listaPoco = new List<CategoriaPoco>();
+            //List<Categoria> lista = this.repo.Read();
+            //List<CategoriaPoco> listaPoco = new List<CategoriaPoco>();
 
-            foreach (Categoria item in lista)
-            {
-                CategoriaPoco poco = this.ConvertTo(item);
-                listaPoco.Add(poco);
-            }
+            //foreach (Categoria item in lista)
+            //{
+            //    CategoriaPoco poco = this.ConvertTo(item);
+            //    listaPoco.Add(poco);
+            //}
+            //return listaPoco;
+
+            List<CategoriaPoco> listaPoco = this.repo.Read()
+                .Select(cat =>
+                    new CategoriaPoco()
+                    {
+                        Codigo = cat.Codigo,
+                        Descricao = cat.Descricao,
+                        Ativo = cat.Ativo,
+                        DataInclusao = cat.DataInclusao
+                    }
+                )
+                .ToList();
             return listaPoco;
         }
 
         public override CategoriaPoco ConvertTo(Categoria dominio)
         {
-            return new CategoriaPoco(dominio.Codigo, dominio.Descricao, dominio.Ativo, dominio.DataInclusao);
+            return new CategoriaPoco()
+            {
+                Codigo = dominio.Codigo, 
+                Descricao = dominio.Descricao, 
+                Ativo = dominio.Ativo, 
+                DataInclusao = dominio.DataInclusao
+            };
         }
 
         public override Categoria ConvertTo(CategoriaPoco poco)

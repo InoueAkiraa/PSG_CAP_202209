@@ -19,13 +19,6 @@ namespace Atacado.Poco.Estoque
         public DateTime DataInclusao { get => this.dataInclusao; set => this.dataInclusao = value; }
 
         public BaseEstoque() : base()
-        { }
-        public BaseEstoque(int codigo, string descricao, bool ativo, DateTime dataInclusao)
-        {
-            this.codigo = codigo;
-            this.descricao = descricao;
-            this.ativo = ativo;
-            this.dataInclusao = dataInclusao;
-        }        
+        { }     
     }
 }

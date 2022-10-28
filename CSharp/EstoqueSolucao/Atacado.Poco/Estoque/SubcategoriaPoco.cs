@@ -14,11 +14,5 @@ namespace Atacado.Poco.Estoque
 
         public SubcategoriaPoco() : base()
         { }
-
-        public SubcategoriaPoco(int codigo, string descricao, bool ativo, DateTime dataInclusao, int codigoCategoria)
-            : base(codigo, descricao, ativo, dataInclusao)
-        {
-            this.codigoCategoria = codigoCategoria;
-        }
     }
 }

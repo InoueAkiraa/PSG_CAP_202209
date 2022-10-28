@@ -16,7 +16,7 @@ namespace Atacado.Poco.RH
         protected string emailCorporativo;
 
         public string Cnpj { get => cnpj; set => cnpj = value; }
-        public string InscricaoEstaduao { get => inscricaoEstadual; set => inscricaoEstadual = value; }
+        public string InscricaoEstadual { get => inscricaoEstadual; set => inscricaoEstadual = value; }
         public DateTime Fundacao { get => fundacao; set => fundacao = value; }
         public string NomeFantasia { get => nomeFantasia; set => nomeFantasia = value; }
         public string RazaoSocial { get => razaoSocial; set => razaoSocial = value; }
