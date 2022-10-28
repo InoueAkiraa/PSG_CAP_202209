@@ -25,7 +25,7 @@ namespace Atacado.DB.FakeDB.RH
             }
         }
 
-        public static void Carregar()
+        private static void Carregar()
         {
             enderecos.Add(new Endereco(1, "Rua Igarapé", 162, "Casa", "Centro", "30120060", "Belo Horizonte", "MG"));
                                            

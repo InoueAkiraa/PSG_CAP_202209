@@ -25,7 +25,7 @@ namespace Atacado.DB.FakeDB.RH
             }
         }
 
-        public static void Carregar()
+        private static void Carregar()
         {
             prestadores.Add(new Prestador(1, "123", "321", new DateTime(1986, 4, 10), "Luizao Engenheiro de Software",
                 "Colossus Sistemas", "Colossus@empresa.com", new DateOnly(2000, 1, 1), new DateOnly(2010, 1, 1)));

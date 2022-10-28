@@ -25,7 +25,7 @@ namespace Atacado.DB.FakeDB.RH
             }
         }
 
-        public static void Carregar()
+        private static void Carregar()
         {
             usuarios.Add(new Usuario(1, "user1@login.com", "senha123", "Client"));
 

@@ -25,7 +25,7 @@ namespace Atacado.DB.FakeDB.RH
             }
         }
 
-        public static void Carregar()
+        private static void Carregar()
         {
             parceiros.Add(new Parceiro(1, "123", "321", new DateTime(2001, 4, 1), "Hikari Sistemas", "Hikari Desenvolvimento de Sistemas",
                 "HikariEmpresa@hotmail", 100, 15, "Desenvolvimento"));
