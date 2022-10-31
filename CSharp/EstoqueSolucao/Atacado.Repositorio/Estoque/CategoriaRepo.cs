@@ -5,34 +5,35 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Atacado.Repositorio.Base;
-using Atacado.Dominio.Estoque;
-using Atacado.DB.FakeDB.Estoque;
+using Atacado.DB.EF.Database;
 
 namespace Atacado.Repositorio.Estoque
 {
     public class CategoriaRepo : BaseRepositorio<Categoria>
     {
-        private EstoqueContexto contexto;
+        private ProjetoAcademiaContext contexto;
 
         public CategoriaRepo()
         {
-            this.contexto = new EstoqueContexto();
+            this.contexto = new ProjetoAcademiaContext();
         }
 
         public override Categoria Create(Categoria instancia)
         {
-            return this.contexto.AddCategoria(instancia);
+            this.contexto.Categorias.Add(instancia);
+            return instancia;
         }
 
         public override Categoria Delete(int chave)
         {
             Categoria del = this.Read(chave);
-            if (this.contexto.Categorias.Remove(del) == false)
+            if (del == null)
             {
                 return null;
             }
             else
             {
+                this.contexto.Categorias.Remove(del);
                 return del;
             }
         }
@@ -49,7 +50,7 @@ namespace Atacado.Repositorio.Estoque
 
         public override List<Categoria> Read()
         {
-            return this.contexto.Categorias;
+            return this.contexto.Categorias.ToList();
         }
 
         public override Categoria Update(Categoria instancia)
@@ -62,7 +63,6 @@ namespace Atacado.Repositorio.Estoque
             else
             {
                 atu.Descricao = instancia.Descricao;
-                atu.Ativo = instancia.Ativo;
                 return atu;
             }
         }

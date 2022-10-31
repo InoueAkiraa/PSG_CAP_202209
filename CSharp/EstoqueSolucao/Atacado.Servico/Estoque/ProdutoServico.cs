@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Atacado.Servico.Base;
-using Atacado.Dominio.Estoque;
+using Atacado.DB.EF.Database;
 using Atacado.Poco.Estoque;
 using Atacado.Repositorio.Estoque;
 
@@ -34,10 +34,9 @@ namespace Atacado.Servico.Estoque
                     new ProdutoPoco()
                     {
                         Codigo = pro.Codigo,
+                        CodigoSubcategoria = pro.CodigoSubcategoria,
                         Descricao = pro.Descricao,
-                        Ativo = pro.Ativo,
-                        DataInclusao = pro.DataInclusao,
-                        CodigoSubcategoria = pro.CodigoSubcategoria
+                        DataInsert = pro.DataInsert                        
                     }
                 )
                 .ToList();
@@ -48,17 +47,24 @@ namespace Atacado.Servico.Estoque
         {
             return new ProdutoPoco()
             {
-                Codigo = dominio.Codigo,
+                Codigo = dominio.Codigo,                
+                CodigoCategoria = dominio.CodigoCategoria,
+                CodigoSubcategoria = dominio.CodigoSubcategoria,
                 Descricao = dominio.Descricao,
-                Ativo = dominio.Ativo,
-                DataInclusao = dominio.DataInclusao,
-                CodigoSubcategoria = dominio.CodigoSubcategoria
+                DataInsert = dominio.DataInsert                
             };
         }
 
         public override Produto ConvertTo(ProdutoPoco poco)
         {
-            return new Produto(poco.Codigo, poco.Descricao, poco.Ativo, poco.DataInclusao, poco.CodigoSubcategoria);
+            return new Produto()
+            {
+                Codigo = poco.Codigo,
+                CodigoCategoria = poco.CodigoCategoria,
+                CodigoSubcategoria = poco.CodigoSubcategoria,
+                Descricao = poco.Descricao,
+                DataInsert = poco.DataInsert
+            };
         }
 
         public override ProdutoPoco Delete(int chave)

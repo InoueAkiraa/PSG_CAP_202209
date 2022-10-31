@@ -1,17 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Atacado.Poco.Estoque
 {
-    public class ProdutoPoco : BaseEstoque
-    {
-        private int codigoSubcategoria;
+    public class ProdutoPoco
+    {        
+        public int Codigo { get; set; }
 
-        public int CodigoSubcategoria { get => this.codigoSubcategoria; set => this.codigoSubcategoria = value; }
-        public ProdutoPoco() : base()
+        public int CodigoSubcategoria { get; set; }
+
+        public int CodigoCategoria { get; set; }
+
+        public string Descricao { get; set; } = null!;
+
+        public DateTime DataInsert { get; set; }
+
+        public ProdutoPoco()
         { }
     }
 }

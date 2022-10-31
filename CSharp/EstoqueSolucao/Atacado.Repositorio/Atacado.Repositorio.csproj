@@ -7,8 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Atacado.DB.FakeDB\Atacado.DB.FakeDB.csproj" />
-    <ProjectReference Include="..\Atacado.Dominio\Atacado.Dominio.csproj" />
+    <ProjectReference Include="..\Atacado.DB.EF\Atacado.DB.EF.csproj" />
   </ItemGroup>
 
 </Project>
