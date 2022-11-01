@@ -12,6 +12,8 @@ namespace Atacado.Poco.Estoque
 
         public DateTime DataInsert { get; set; }
 
+        public bool? Ativo { get; set; }
+
         public SubcategoriaPoco()
         { }
     }

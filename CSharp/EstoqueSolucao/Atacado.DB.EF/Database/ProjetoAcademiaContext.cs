@@ -41,6 +41,8 @@ namespace Atacado.DB.EF.Database
             modelBuilder.Entity<Categoria>(entity =>
             {
                 entity.Property(e => e.DataInsert).HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.Ativo).HasDefaultValueSql("((1))");
             });
 
             modelBuilder.Entity<Cliente>(entity =>
@@ -105,6 +107,8 @@ namespace Atacado.DB.EF.Database
             {
                 entity.Property(e => e.DataInsert).HasDefaultValueSql("(getdate())");
 
+                entity.Property(e => e.Ativo).HasDefaultValueSql("((1))");
+
                 entity.HasOne(d => d.CodigoSubcategoriaNavigation)
                     .WithMany(p => p.Produtos)
                     .HasForeignKey(d => d.CodigoSubcategoria)
@@ -120,6 +124,8 @@ namespace Atacado.DB.EF.Database
             modelBuilder.Entity<Subcategoria>(entity =>
             {
                 entity.Property(e => e.DataInsert).HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.Ativo).HasDefaultValueSql("((1))");
 
                 entity.HasOne(d => d.CodigoCategoriaNavigation)
                     .WithMany(p => p.Subcategoria)

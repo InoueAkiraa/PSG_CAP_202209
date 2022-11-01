@@ -20,7 +20,8 @@ namespace Atacado.Repositorio.Estoque
 
         public override Produto Create(Produto instancia) //Caso ele deseje criar uma nova subcategoria
         {
-            this.contexto.Produtos.Add(instancia);                                                        //vai chamar o método de EstoqueContexto
+            this.contexto.Produtos.Add(instancia);        //vai chamar o método de EstoqueContexto
+            this.contexto.SaveChanges();
             return instancia;
         }
 
@@ -34,6 +35,7 @@ namespace Atacado.Repositorio.Estoque
             else
             {
                 this.contexto.Produtos.Remove(del);
+                this.contexto.SaveChanges();
                 return del; //caso exista, retorna o registro apagado
             }
         }
@@ -65,6 +67,8 @@ namespace Atacado.Repositorio.Estoque
                 atu.CodigoCategoria = instancia.CodigoCategoria;
                 atu.CodigoSubcategoria = instancia.CodigoSubcategoria;                
                 atu.Descricao = instancia.Descricao;
+                atu.Ativo = instancia.Ativo;
+                this.contexto.SaveChanges();
                 return atu;
             }
         }

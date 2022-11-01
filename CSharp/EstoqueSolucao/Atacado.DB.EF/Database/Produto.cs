@@ -18,6 +18,9 @@ namespace Atacado.DB.EF.Database
         [Column(TypeName = "datetime")]
         public DateTime DataInsert { get; set; }
 
+        [Column(name: "Ativo")]
+        public bool? Ativo { get; set; }
+
         [ForeignKey("CodigoSubcategoria")]
         [InverseProperty("Produtos")]
         public virtual Subcategoria CodigoSubcategoriaNavigation { get; set; } = null!;

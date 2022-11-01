@@ -21,6 +21,7 @@ namespace Atacado.Repositorio.Estoque
         public override Categoria Create(Categoria instancia)
         {
             this.contexto.Categorias.Add(instancia);
+            this.contexto.SaveChanges();
             return instancia;
         }
 
@@ -34,6 +35,7 @@ namespace Atacado.Repositorio.Estoque
             else
             {
                 this.contexto.Categorias.Remove(del);
+                this.contexto.SaveChanges();
                 return del;
             }
         }
@@ -63,6 +65,8 @@ namespace Atacado.Repositorio.Estoque
             else
             {
                 atu.Descricao = instancia.Descricao;
+                atu.Ativo = instancia.Ativo;
+                this.contexto.SaveChanges();
                 return atu;
             }
         }

@@ -15,7 +15,7 @@ namespace Atacado.Servico.Estoque
     {
         private SubcategoriaRepo repo;
 
-        public SubcategoriaServico()
+        public SubcategoriaServico() : base()
         {
             this.repo = new SubcategoriaRepo();
         }
@@ -36,6 +36,7 @@ namespace Atacado.Servico.Estoque
                         Codigo = sub.Codigo,
                         CodigoCategoria = sub.CodigoCategoria,
                         Descricao = sub.Descricao,
+                        Ativo = sub.Ativo,
                         DataInsert = sub.DataInsert
                     }
                 )
@@ -50,6 +51,7 @@ namespace Atacado.Servico.Estoque
                 Codigo = dominio.Codigo,
                 CodigoCategoria = dominio.CodigoCategoria,
                 Descricao = dominio.Descricao, 
+                Ativo = dominio.Ativo,
                 DataInsert = dominio.DataInsert
             };
         }
@@ -61,6 +63,7 @@ namespace Atacado.Servico.Estoque
                 Codigo = poco.Codigo,
                 CodigoCategoria = poco.CodigoCategoria,
                 Descricao = poco.Descricao,
+                Ativo = poco.Ativo,
                 DataInsert = poco.DataInsert
             };
         }
