@@ -8,6 +8,7 @@ using Atacado.Servico.Base;
 using Atacado.DB.EF.Database;
 using Atacado.Poco.Estoque;
 using Atacado.Repositorio.Estoque;
+using System.Linq.Expressions;
 
 namespace Atacado.Servico.Estoque
 {
@@ -28,14 +29,29 @@ namespace Atacado.Servico.Estoque
 
         public override List<CategoriaPoco> Browse()
         {
-            List<CategoriaPoco> listaPoco = this.repo.Read()
-                .Select(cat =>
+            return this.Browse(null);
+        }
+
+        public override List<CategoriaPoco> Browse(Expression<Func<Categoria, bool>> predicate = null)
+        {
+            List<CategoriaPoco> listaPoco;
+            IQueryable<Categoria> query;
+            if (predicate == null)
+            {
+                query = this.repo.Read(null);
+            }
+            else
+            {
+                query = this.repo.Read(predicate);
+            }
+
+            listaPoco = query.Select(cat =>
                     new CategoriaPoco()
                     {
                         Codigo = cat.Codigo,
                         Descricao = cat.Descricao,
                         Ativo = cat.Ativo,
-                        DataInsert = cat.DataInsert                        
+                        DataInsert = cat.DataInsert
                     }
                 )
                 .ToList();
