@@ -31,7 +31,6 @@ builder.Services.AddSwaggerGen(opcoes =>
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     opcoes.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -42,9 +41,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

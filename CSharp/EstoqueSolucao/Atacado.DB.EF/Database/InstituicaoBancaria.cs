@@ -20,5 +20,7 @@ namespace Atacado.DB.EF.Database
         public string SiteWww { get; set; } = null!;
         [Column(TypeName = "datetime")]
         public DateTime? DataInsert { get; set; }
+        [Column(name: "Ativo")]
+        public bool? Ativo { get; set; }
     }
 }

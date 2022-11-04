@@ -59,6 +59,8 @@ namespace Atacado.DB.EF.Database
             modelBuilder.Entity<Departamento>(entity =>
             {
                 entity.Property(e => e.DataInsert).HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.Ativo).HasDefaultValueSql("((1))");
             });
 
             modelBuilder.Entity<Estado>(entity =>
@@ -76,11 +78,15 @@ namespace Atacado.DB.EF.Database
                 entity.Property(e => e.DataAdmissao).HasDefaultValueSql("(getdate())");
 
                 entity.Property(e => e.Sexo).IsFixedLength();
+
+                entity.Property(e => e.Ativo).HasDefaultValueSql("((1))");
             });
 
             modelBuilder.Entity<InstituicaoBancaria>(entity =>
             {
                 entity.Property(e => e.DataInsert).HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.Ativo).HasDefaultValueSql("((1))");
             });
 
             modelBuilder.Entity<Municipio>(entity =>
@@ -119,6 +125,8 @@ namespace Atacado.DB.EF.Database
             modelBuilder.Entity<Profissao>(entity =>
             {
                 entity.Property(e => e.DataInsert).HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.Ativo).HasDefaultValueSql("((1))");
             });
 
             modelBuilder.Entity<Subcategoria>(entity =>

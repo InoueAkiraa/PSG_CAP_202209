@@ -33,5 +33,7 @@ namespace Atacado.DB.EF.Database
         public int CtpsSerie { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime? DataAdmissao { get; set; }
+        [Column(name: "Ativo")]
+        public bool? Ativo { get; set; }
     }
 }
