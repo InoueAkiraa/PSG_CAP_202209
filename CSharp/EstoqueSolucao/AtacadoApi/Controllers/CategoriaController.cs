@@ -28,9 +28,17 @@ namespace AtacadoApi.Controllers
         /// </summary>
         /// <returns>Uma lista com todos os registros.</returns>
         [HttpGet]
-        public List<CategoriaPoco> GetAll()
+        public ActionResult<List<CategoriaPoco>> GetAll()
         {
-            return this.servico.Browse();
+            try
+            {
+                List<CategoriaPoco> lista = this.servico.Browse();
+                return Ok(lista);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
 
         /// <summary>
@@ -39,9 +47,17 @@ namespace AtacadoApi.Controllers
         /// <param name="chave">chave primária da tabela</param>
         /// <returns></returns>
         [HttpGet("{chave:int}")]
-        public CategoriaPoco GetById(int chave)
+        public ActionResult<CategoriaPoco> GetById(int chave)
         {
-            return this.servico.Read(chave);
+            try
+            {
+                CategoriaPoco poco = this.servico.Read(chave);
+                return Ok(poco);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
 
         /// <summary>
