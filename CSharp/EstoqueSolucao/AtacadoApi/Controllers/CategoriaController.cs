@@ -66,9 +66,17 @@ namespace AtacadoApi.Controllers
         /// <param name="poco">instância passada como parâmetro</param>
         /// <returns></returns>
         [HttpPost]
-        public CategoriaPoco Post([FromBody] CategoriaPoco poco) 
+        public ActionResult<CategoriaPoco> Post([FromBody] CategoriaPoco poco) 
         {
-            return this.servico.Add(poco);
+            try
+            {
+                CategoriaPoco novoPoco = this.servico.Add(poco);
+                return Ok(nooPoco);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
 
         /// <summary>
@@ -77,20 +85,35 @@ namespace AtacadoApi.Controllers
         /// <param name="poco">instância passada como parâmetro</param>
         /// <returns></returns>
         [HttpPut]
-        public CategoriaPoco Put([FromBody] CategoriaPoco poco)
+        public ActionResult<CategoriaPoco> Put([FromBody] CategoriaPoco poco)
         {
-            return this.servico.Edit(poco);
+            try
+            {
+                CategoriaPoco novoPoco = this.servico.Edit(poco);
+                return Ok(novoPoco);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
-
         /// <summary>
         /// Realiza a exclusão de um registro de acordo com a chave primária informada
         /// </summary>
         /// <param name="chave">chave primária da tabela</param>
         /// <returns></returns>
         [HttpDelete("{chave:int}")]
-        public CategoriaPoco DeleteById(int chave)
+        public ActionResult<CategoriaPoco> DeleteById(int chave)
         {
-            return this.servico.Delete(chave);
+            try
+            {
+                CategoriaPoco poco = this.servico.Delete(chave);
+                return Ok(poco);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
 
         /// <summary>
@@ -99,9 +122,17 @@ namespace AtacadoApi.Controllers
         /// <param name="poco">instância passada como parâmetro</param>
         /// <returns></returns>
         [HttpDelete]
-        public CategoriaPoco Delete([FromBody] CategoriaPoco poco)
+        public ActionResult<CategoriaPoco> Delete([FromBody] CategoriaPoco poco)
         {
-            return this.servico.Delete(poco);
+            try
+            {
+                CategoriaPoco novoPoco = this.servico.Delete(poco);
+                return Ok(novoPoco);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
     }
 }
