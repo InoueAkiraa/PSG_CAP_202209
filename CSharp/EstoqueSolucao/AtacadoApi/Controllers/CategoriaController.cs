@@ -71,7 +71,7 @@ namespace AtacadoApi.Controllers
             try
             {
                 CategoriaPoco novoPoco = this.servico.Add(poco);
-                return Ok(nooPoco);
+                return Ok(novoPoco);
             }
             catch (Exception ex)
             {

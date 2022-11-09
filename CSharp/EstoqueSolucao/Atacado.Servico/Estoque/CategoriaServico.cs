@@ -15,12 +15,9 @@ namespace Atacado.Servico.Estoque
 {
     public class CategoriaServico : BaseServico<CategoriaPoco, Categoria>
     {
-        private CategoriaRepo repo;
-
         private GenericRepository<Categoria> genrepo;
-        public CategoriaServico() : base()
+        public CategoriaServico() 
         {
-            this.repo = new CategoriaRepo();
             this.genrepo = new GenericRepository<Categoria>();
         }
         public override CategoriaPoco Add(CategoriaPoco poco)
