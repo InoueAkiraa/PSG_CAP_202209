@@ -9,17 +9,17 @@ namespace Atacado.Repositorio.Base
 {
     public interface IGenericRepository<T> where T : class
     {
-        IQueryable<T> Browseable(Expression<Func<T, bool>> predicate = null);
+        IQueryable<T> Browseable(Expression<Func<T, bool>>? predicate = null);
 
-        IEnumerable<T> GetAll(int? take = null, int? skip = null);
+        IQueryable<T> GetAll(int? take = null, int? skip = null);
 
-        T GetById(object id);
+        T? GetById(object id);
         
-        T Insert(T obj);
+        T? Insert(T obj);
 
-        T Update(T obj);
+        T? Update(T obj);
 
-        T Delete(object id);
+        T? Delete(object id);
 
         void Save();
     }

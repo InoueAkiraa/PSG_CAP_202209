@@ -13,18 +13,22 @@ namespace Atacado.Servico.Base
     {
         List<TPoco> Listar();
 
-        List<TPoco> Consultar(Expression<Func<TDominio, bool>> predicate = null);
+        List<TPoco> Listar(int? take = null, int? skip = null);
 
-        TPoco PesquisarPorChave(object chave);
+        List<TPoco> Consultar(Expression<Func<TDominio, bool>>? predicate = null);
 
-        TPoco Inserir(TPoco poco);
+        TPoco? PesquisarPorChave(object chave);
 
-        TPoco Alterar(TPoco poco);
+        TPoco? Inserir(TPoco poco);
 
-        TPoco Excluir(object chave);
+        TPoco? Alterar(TPoco poco);
+
+        TPoco? Excluir(object chave);
 
         TDominio ConverterPara(TPoco poco);
 
         TPoco ConverterPara(TDominio dominio);
+
+        List<TPoco> ConverterPara(IQueryable<TDominio> query);
     }
 }

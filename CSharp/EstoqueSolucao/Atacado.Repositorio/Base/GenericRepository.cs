@@ -21,7 +21,7 @@ namespace Atacado.Repositorio.Base
             this.table = this.context.Set<TDominio>();
         }
 
-        public IQueryable<TDominio> Browseable(Expression<Func<TDominio, bool>> predicate = null)
+        public IQueryable<TDominio> Browseable(Expression<Func<TDominio, bool>>? predicate = null)
         {
             if (predicate == null)
             {
@@ -33,42 +33,45 @@ namespace Atacado.Repositorio.Base
             }
         }        
 
-        public IEnumerable<TDominio> GetAll(int? take = null, int? skip = null)
+        public IQueryable<TDominio> GetAll(int? take = null, int? skip = null)
         {
             if (skip == null)
             {
-                return this.table.ToList();
+                return this.table;
             }
             else
             {
-                return this.table.Skip(skip.Value).Take(take.Value).ToList();
+                return this.table.Skip(skip.Value).Take(take.Value);
             }            
         }
 
-        public TDominio GetById(object id)
+        public TDominio? GetById(object id)
         {
             return this.table.Find(id);
         }
 
-        public TDominio Insert(TDominio obj)
+        public TDominio? Insert(TDominio obj)
         {
             this.table.Add(obj);
             this.context.SaveChanges();
             return obj;
         }
         
-        public TDominio Update(TDominio obj)
+        public TDominio? Update(TDominio obj)
         {
             this.table.Attach(obj);            
             this.context.Entry(obj).State = EntityState.Modified;
             this.context.SaveChanges();
             return obj;
         }
-        public TDominio Delete(object id)
+        public TDominio? Delete(object id)
         {
-            TDominio tabelaExistente = this.GetById(id);
-            this.table.Remove(tabelaExistente);
-            this.context.SaveChanges();
+            TDominio? tabelaExistente = this.GetById(id);
+            if (tabelaExistente != null)
+            {
+                this.table.Remove(tabelaExistente);
+                this.context.SaveChanges();
+            }            
             return tabelaExistente; 
         }
         public void Save()

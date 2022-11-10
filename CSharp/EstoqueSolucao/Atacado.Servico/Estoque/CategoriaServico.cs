@@ -37,7 +37,7 @@ namespace Atacado.Servico.Estoque
             };
         }
 
-        public override List<CategoriaPoco> Consultar(Expression<Func<Categoria, bool>> predicate = null)
+        public override List<CategoriaPoco> Consultar(Expression<Func<Categoria, bool>>? predicate = null)
         {
             IQueryable<Categoria> query;
             if (predicate == null)

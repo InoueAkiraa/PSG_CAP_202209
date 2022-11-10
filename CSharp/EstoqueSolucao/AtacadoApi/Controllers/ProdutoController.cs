@@ -29,11 +29,11 @@ namespace AtacadoApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public ActionResult<List<ProdutoPoco>> GetAll()
+        public ActionResult<List<ProdutoPoco>> GetAll(int? take = null, int? skip = null)
         {
             try
             {
-                List<ProdutoPoco> listaPoco = this.servico.Listar();
+                List<ProdutoPoco> listaPoco = this.servico.Listar(take, skip);
                 return Ok(listaPoco);
             }
             catch (Exception ex)
