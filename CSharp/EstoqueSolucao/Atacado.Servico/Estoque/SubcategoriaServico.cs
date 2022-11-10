@@ -13,68 +13,21 @@ using Atacado.Repositorio.Base;
 
 namespace Atacado.Servico.Estoque
 {
-    public class SubcategoriaServico : BaseServico<SubcategoriaPoco, Subcategoria>
+    public class SubcategoriaServico : GenericService<Subcategoria, SubcategoriaPoco>
     {
-        private GenericRepository<Subcategoria> genrepo;
-
-        public SubcategoriaServico() 
-        {
-            this.genrepo = new GenericRepository<Subcategoria>();
-        }
-
-        public override SubcategoriaPoco Add(SubcategoriaPoco poco)
-        {
-            Subcategoria nova = this.ConvertTo(poco);
-            Subcategoria criada = this.genrepo.Insert(nova);
-            SubcategoriaPoco criadaPoco = this.ConvertTo(criada);
-            return criadaPoco;
-        }
-
-        public override List<SubcategoriaPoco> Browse()
-        {
-            return this.Browse(null);
-        }
-
-        public override List<SubcategoriaPoco> Browse(Expression<Func<Subcategoria, bool>> predicate = null)
-        {
-            List<SubcategoriaPoco> listaPoco;
-            IQueryable<Subcategoria> query;
-            if (predicate == null)
-            {
-                query = this.genrepo.Browseable(null);
-            }
-            else
-            {
-                query = this.genrepo.Browseable(predicate);
-            }
-
-            listaPoco = query.Select(sub =>
-                    new SubcategoriaPoco()
-                    {
-                        Codigo = sub.Codigo,
-                        CodigoCategoria = sub.CodigoCategoria,
-                        Descricao = sub.Descricao,
-                        Ativo = sub.Ativo,
-                        DataInsert = sub.DataInsert
-                    }
-                )
-                .ToList();
-            return listaPoco;
-        }
-
-        public override SubcategoriaPoco ConvertTo(Subcategoria dominio)
+        public override SubcategoriaPoco ConverterPara(Subcategoria dominio)
         {
             return new SubcategoriaPoco()
             {
                 Codigo = dominio.Codigo,
                 CodigoCategoria = dominio.CodigoCategoria,
-                Descricao = dominio.Descricao, 
+                Descricao = dominio.Descricao,
                 Ativo = dominio.Ativo,
                 DataInsert = dominio.DataInsert
             };
         }
 
-        public override Subcategoria ConvertTo(SubcategoriaPoco poco)
+        public override Subcategoria ConverterPara(SubcategoriaPoco poco)
         {
             return new Subcategoria()
             {
@@ -86,33 +39,29 @@ namespace Atacado.Servico.Estoque
             };
         }
 
-        public override SubcategoriaPoco Delete(int chave)
+        public override List<SubcategoriaPoco> Consultar(Expression<Func<Subcategoria, bool>> predicate = null)
         {
-            Subcategoria del = this.genrepo.Delete(chave);
-            SubcategoriaPoco delPoco = this.ConvertTo(del);
-            return delPoco;
-        }
-
-        public override SubcategoriaPoco Delete(SubcategoriaPoco poco)
-        {
-            Subcategoria del = this.genrepo.Delete(poco.Codigo);
-            SubcategoriaPoco delPoco = this.ConvertTo(del);
-            return delPoco;
-        }
-
-        public override SubcategoriaPoco Edit(SubcategoriaPoco poco)
-        {
-            Subcategoria editada = this.ConvertTo(poco);
-            Subcategoria alterada = this.genrepo.Update(editada);
-            SubcategoriaPoco alteradaPoco = this.ConvertTo(alterada);
-            return alteradaPoco;
-        }
-
-        public override SubcategoriaPoco Read(int chave)
-        {
-            Subcategoria lida = this.genrepo.GetById(chave);
-            SubcategoriaPoco lidaPoco = this.ConvertTo(lida);
-            return lidaPoco;
+            IQueryable<Subcategoria> query;
+            if (predicate == null)
+            {
+                query = this.genrepo.Browseable(null);
+            }
+            else
+            {
+                query = this.genrepo.Browseable(predicate);
+            }
+            List<SubcategoriaPoco> listaPoco = query.Select(sub =>
+                    new SubcategoriaPoco()
+                    {
+                        Codigo = sub.Codigo,
+                        CodigoCategoria = sub.CodigoCategoria,
+                        Descricao = sub.Descricao,
+                        Ativo = sub.Ativo,
+                        DataInsert = sub.DataInsert
+                    }
+                )
+                .ToList();
+            return listaPoco;
         }
     }
 }

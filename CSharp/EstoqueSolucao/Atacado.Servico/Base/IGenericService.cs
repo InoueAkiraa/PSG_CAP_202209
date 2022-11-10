@@ -13,7 +13,7 @@ namespace Atacado.Servico.Base
     {
         List<TPoco> Listar();
 
-        IQueryable<TPoco> Consultar(Expression<Func<TDominio, bool>> predicate = null);
+        List<TPoco> Consultar(Expression<Func<TDominio, bool>> predicate = null);
 
         TPoco PesquisarPorChave(object chave);
 

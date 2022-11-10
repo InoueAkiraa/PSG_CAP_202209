@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Atacado.Poco.Estoque;
 using Atacado.Servico.Estoque;
 using System.Runtime.CompilerServices;
+using System.Collections.Generic;
+using System;
 
 namespace AtacadoApi.Controllers
 {
@@ -30,9 +32,18 @@ namespace AtacadoApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public List<SubcategoriaPoco> GetAll()
+        public ActionResult<List<SubcategoriaPoco>> GetAll()
         {
-            return this.servico.Browse();
+            try
+            {
+                List <SubcategoriaPoco> listaPoco = this.servico.Listar();
+                return Ok(listaPoco);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+            
         }
 
         /// <summary>
@@ -41,9 +52,17 @@ namespace AtacadoApi.Controllers
         /// <param name="catid">Código da categoria (chave estrangeira) da tabela Subcategoria</param>
         /// <returns></returns>
         [HttpGet("PorCategoria/{catid:int}")]
-        public List<SubcategoriaPoco> GetPorCategoria(int catid)
+        public ActionResult<List<SubcategoriaPoco>> GetPorCategoria(int catid)
         {
-            return this.servico.Browse(sub => sub.CodigoCategoria == catid).ToList();
+            try
+            {
+                List<SubcategoriaPoco> listaPoco = this.servico.Consultar(sub => sub.CodigoCategoria == catid).ToList();
+                return Ok(listaPoco);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }            
         }
 
         /// <summary>
@@ -52,9 +71,17 @@ namespace AtacadoApi.Controllers
         /// <param name="chave">chave primária da tabela</param>
         /// <returns></returns>
         [HttpGet("{chave:int}")]
-        public SubcategoriaPoco GetById(int chave)
+        public ActionResult<SubcategoriaPoco> GetById(int chave)
         {
-            return this.servico.Read(chave);
+            try
+            {
+                SubcategoriaPoco poco = this.servico.PesquisarPorChave(chave);
+                return Ok(poco);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
 
         /// <summary>
@@ -63,9 +90,17 @@ namespace AtacadoApi.Controllers
         /// <param name="poco">instância passada como parâmetro</param>
         /// <returns></returns>
         [HttpPost]
-        public SubcategoriaPoco Post([FromBody] SubcategoriaPoco poco)
+        public ActionResult<SubcategoriaPoco> Post([FromBody] SubcategoriaPoco poco)
         {
-            return this.servico.Add(poco);
+            try
+            {
+                SubcategoriaPoco novoPoco = this.servico.Inserir(poco);
+                return Ok(novoPoco);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
 
         /// <summary>
@@ -74,9 +109,17 @@ namespace AtacadoApi.Controllers
         /// <param name="poco">instância passada como parâmetro</param>
         /// <returns></returns>
         [HttpPut]
-        public SubcategoriaPoco Put([FromBody] SubcategoriaPoco poco)
+        public ActionResult<SubcategoriaPoco> Put([FromBody] SubcategoriaPoco poco)
         {
-            return this.servico.Edit(poco);
+            try
+            {
+                SubcategoriaPoco novoPoco = this.servico.Alterar(poco);
+                return Ok(novoPoco);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
 
         /// <summary>
@@ -85,9 +128,17 @@ namespace AtacadoApi.Controllers
         /// <param name="chave"></param>
         /// <returns></returns>
         [HttpDelete("{chave:int}")]
-        public SubcategoriaPoco DeleteById(int chave)
+        public ActionResult<SubcategoriaPoco> DeleteById(int chave)
         {
-            return this.servico.Delete(chave);
+            try
+            {
+                SubcategoriaPoco poco = this.servico.Excluir(chave);
+                return Ok(poco);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
 
         /// <summary>
@@ -96,9 +147,17 @@ namespace AtacadoApi.Controllers
         /// <param name="poco"></param>
         /// <returns></returns>
         [HttpDelete]
-        public SubcategoriaPoco Delete([FromBody] SubcategoriaPoco poco)
+        public ActionResult<SubcategoriaPoco> Delete([FromBody] SubcategoriaPoco poco)
         {
-            return this.servico.Delete(poco);
+            try
+            {
+                SubcategoriaPoco novoPoco = this.servico.Excluir(poco.Codigo);
+                return Ok(novoPoco);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
     }
 }
