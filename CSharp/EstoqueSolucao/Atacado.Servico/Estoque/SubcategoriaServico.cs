@@ -14,31 +14,7 @@ using Atacado.Repositorio.Base;
 namespace Atacado.Servico.Estoque
 {
     public class SubcategoriaServico : GenericService<Subcategoria, SubcategoriaPoco>
-    {
-        public override SubcategoriaPoco ConverterPara(Subcategoria dominio)
-        {
-            return new SubcategoriaPoco()
-            {
-                Codigo = dominio.Codigo,
-                CodigoCategoria = dominio.CodigoCategoria,
-                Descricao = dominio.Descricao,
-                Ativo = dominio.Ativo,
-                DataInsert = dominio.DataInsert
-            };
-        }
-
-        public override Subcategoria ConverterPara(SubcategoriaPoco poco)
-        {
-            return new Subcategoria()
-            {
-                Codigo = poco.Codigo,
-                CodigoCategoria = poco.CodigoCategoria,
-                Descricao = poco.Descricao,
-                Ativo = poco.Ativo,
-                DataInsert = poco.DataInsert
-            };
-        }
-
+    {        
         public override List<SubcategoriaPoco> Consultar(Expression<Func<Subcategoria, bool>>? predicate = null)
         {
             IQueryable<Subcategoria> query;

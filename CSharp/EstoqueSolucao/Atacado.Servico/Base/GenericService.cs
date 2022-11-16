@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-
+using Atacado.Mapping.Base;
 using Atacado.Repositorio.Base;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
@@ -18,9 +18,11 @@ namespace Atacado.Servico.Base
 
         protected GenericRepository<TDominio> genrepo;
 
+        protected GenericMap<TDominio, TPoco> genmap;
         public GenericService()
         {
             this.genrepo = new GenericRepository<TDominio>();
+            this.genmap = new GenericMap<TDominio, TPoco>();
         }
         public List<TPoco> Listar()
         {
@@ -83,14 +85,14 @@ namespace Atacado.Servico.Base
             return delPoco;
         }
 
-        public virtual TDominio ConverterPara(TPoco poco)
+        public TDominio ConverterPara(TPoco poco)
         {
-            throw new NotImplementedException();
+            return this.genmap.Mapping.Map<TDominio>(poco);
         }
 
-        public virtual TPoco ConverterPara(TDominio dominio)
+        public TPoco ConverterPara(TDominio dominio)
         {
-            throw new NotImplementedException();
+            return this.genmap.Mapping.Map<TPoco>(dominio);
         }
 
         public virtual List<TPoco> ConverterPara(IQueryable<TDominio> query)

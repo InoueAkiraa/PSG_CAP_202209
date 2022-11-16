@@ -7,10 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Atacado.DB.EF\Atacado.DB.EF.csproj" />
-    <ProjectReference Include="..\Atacado.Mapping\Atacado.Mapping.csproj" />
     <ProjectReference Include="..\Atacado.Poco\Atacado.Poco.csproj" />
-    <ProjectReference Include="..\Atacado.Repositorio\Atacado.Repositorio.csproj" />
   </ItemGroup>
 
 </Project>

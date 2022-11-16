@@ -14,29 +14,7 @@ using System.Linq.Expressions;
 namespace Atacado.Servico.Estoque
 {
     public class CategoriaServico : GenericService<Categoria, CategoriaPoco>
-    {
-        public override CategoriaPoco ConverterPara(Categoria dominio)
-        {
-            return new CategoriaPoco()
-            {
-                Codigo = dominio.Codigo,
-                Descricao = dominio.Descricao,
-                Ativo = dominio.Ativo,
-                DataInsert = dominio.DataInsert
-            };
-        }
-
-        public override Categoria ConverterPara(CategoriaPoco poco)
-        {
-            return new Categoria()
-            {
-                Codigo = poco.Codigo,
-                Descricao = poco.Descricao,
-                Ativo = poco.Ativo,
-                DataInsert = poco.DataInsert
-            };
-        }
-
+    {     
         public override List<CategoriaPoco> Consultar(Expression<Func<Categoria, bool>>? predicate = null)
         {
             IQueryable<Categoria> query;
