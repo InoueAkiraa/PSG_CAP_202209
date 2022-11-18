@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>Documents\AtacadoApi.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +17,10 @@
     <ProjectReference Include="..\Atacado.Poco\Atacado.Poco.csproj" />
     <ProjectReference Include="..\Atacado.Repositorio\Atacado.Repositorio.csproj" />
     <ProjectReference Include="..\Atacado.Servico\Atacado.Servico.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Documents\" />
   </ItemGroup>
 
 </Project>
