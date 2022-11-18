@@ -68,12 +68,12 @@ namespace AtacadoApi.Controllers
         /// </summary>
         /// <param name="tipid"></param>
         /// <returns></returns>
-        [HttpGet("PorTipoRebanho/{tipid:int}")]
-        public ActionResult<List<RebanhoPoco>> GetPorTipoRebanho(int tipid)
+        [HttpGet("PorTipoRebanho/{tipid:int}/PorMunicipio/{munid:int}")]
+        public ActionResult<List<RebanhoPoco>> GetPorTipoRebanhoPorMunicipio(int tipid, int munid)
         {
             try
             {
-                List<RebanhoPoco> listaPoco = this.servico.Consultar(tip => tip.CodigoTipoRebanho == tipid).ToList();
+                List<RebanhoPoco> listaPoco = this.servico.Consultar(tip => (tip.CodigoTipoRebanho == tipid) && (tip.CodigoMunicipio == munid)).ToList();
                 return Ok(listaPoco);
             }
             catch (Exception ex)
