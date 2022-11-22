@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClinicaApi</name>
+    </assembly>
+    <members>
+        <member name="T:ClinicaApi.Controllers.PacienteController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ClinicaApi.Controllers.PacienteController.#ctor(Clinica.Dominio.EF.ClinicaContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:ClinicaApi.Controllers.PacienteController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Listar todos os registros da tabela Paciente.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.PacienteController.GetPorProfissao(System.Int32)">
+            <summary>
+            Listar todos os registros da tabela Paciente de acordo com o código de Profissão informado.
+            </summary>
+            <param name="catid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.PacienteController.GetById(System.Int32)">
+            <summary>
+            Lista o registro da tabela Paciente de acordo com a chave primária informada
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.PacienteController.Post(Clinica.Poco.PacientePoco)">
+            <summary>
+            Realiza a criação de um registro através de uma instância
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.PacienteController.Put(Clinica.Poco.PacientePoco)">
+            <summary>
+            Realiza a alteração de um registro através de uma instância
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.PacienteController.DeleteById(System.Int32)">
+            <summary>
+            Realiza a exclusão de um registro de acordo com a chave primária informada
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClinicaApi.Controllers.PacienteController.Delete(Clinica.Poco.PacientePoco)">
+            <summary>
+            Realiza a exclusão de um registro através de uma instância
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
