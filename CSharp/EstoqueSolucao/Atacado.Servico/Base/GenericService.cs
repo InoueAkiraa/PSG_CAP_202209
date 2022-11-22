@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Atacado.DB.EF.Database;
 using Atacado.Mapping.Base;
 using Atacado.Repositorio.Base;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
@@ -19,9 +20,9 @@ namespace Atacado.Servico.Base
         protected GenericRepository<TDominio> genrepo;
 
         protected GenericMap<TDominio, TPoco> genmap;
-        public GenericService()
+        public GenericService(ProjetoAcademiaContext context)
         {
-            this.genrepo = new GenericRepository<TDominio>();
+            this.genrepo = new GenericRepository<TDominio>(context);
             this.genmap = new GenericMap<TDominio, TPoco>();
         }
         public List<TPoco> Listar()

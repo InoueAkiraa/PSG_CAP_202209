@@ -12,7 +12,11 @@ using System.Linq.Expressions;
 namespace Atacado.Servico.Estoque
 {
     public class CategoriaServico : GenericService<Categoria, CategoriaPoco>
-    {     
+    {
+
+        public CategoriaServico(ProjetoAcademiaContext context) : base(context)
+        { }
+
         public override List<CategoriaPoco> Consultar(Expression<Func<Categoria, bool>>? predicate = null)
         {
             IQueryable<Categoria> query;

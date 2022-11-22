@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Atacado.Poco.Estoque;
 using Atacado.Servico.Estoque;
 using System.Collections.Generic;
+using Atacado.DB.EF.Database;
 
 namespace AtacadoApi.Controllers
 {
@@ -19,9 +20,9 @@ namespace AtacadoApi.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public ProdutoController() : base()
+        public ProdutoController(ProjetoAcademiaContext context) : base()
         {
-            this.servico = new ProdutoServico();
+            this.servico = new ProdutoServico(context);
         }
 
         /// <summary>

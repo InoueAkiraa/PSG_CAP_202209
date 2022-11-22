@@ -6,6 +6,7 @@ using Atacado.Poco.Pecuaria;
 using System.Collections.Generic;
 using Atacado.Poco.Estoque;
 using Atacado.Servico.Estoque;
+using Atacado.DB.EF.Database;
 
 namespace AtacadoApi.Controllers
 {
@@ -21,9 +22,9 @@ namespace AtacadoApi.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public TipoRebanhoController() : base()
+        public TipoRebanhoController(ProjetoAcademiaContext context) : base()
         {
-            this.servico = new TipoRebanhoServico();
+            this.servico = new TipoRebanhoServico(context);
         }
 
         /// <summary>

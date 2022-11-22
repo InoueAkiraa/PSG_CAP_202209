@@ -13,6 +13,9 @@ namespace Atacado.Servico.Pecuaria
 {
     public class RebanhoServico : GenericService<Rebanho, RebanhoPoco>
     {
+        public RebanhoServico(ProjetoAcademiaContext context) : base(context)
+        { }
+
         public override List<RebanhoPoco> Consultar(Expression<Func<Rebanho, bool>>? predicate = null)
         {
             IQueryable<Rebanho> query;

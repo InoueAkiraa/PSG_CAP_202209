@@ -14,7 +14,10 @@ using Atacado.Repositorio.Base;
 namespace Atacado.Servico.Estoque
 {
     public class SubcategoriaServico : GenericService<Subcategoria, SubcategoriaPoco>
-    {        
+    {
+        public SubcategoriaServico(ProjetoAcademiaContext context) : base(context)
+        { }
+
         public override List<SubcategoriaPoco> Consultar(Expression<Func<Subcategoria, bool>>? predicate = null)
         {
             IQueryable<Subcategoria> query;

@@ -9,7 +9,7 @@
             
             </summary>
         </member>
-        <member name="M:AtacadoApi.Controllers.CategoriaController.#ctor">
+        <member name="M:AtacadoApi.Controllers.CategoriaController.#ctor(Atacado.DB.EF.Database.ProjetoAcademiaContext)">
             <summary>
             
             </summary>
@@ -60,7 +60,7 @@
             
             </summary>
         </member>
-        <member name="M:AtacadoApi.Controllers.ProdutoController.#ctor">
+        <member name="M:AtacadoApi.Controllers.ProdutoController.#ctor(Atacado.DB.EF.Database.ProjetoAcademiaContext)">
             <summary>
             
             </summary>
@@ -133,7 +133,7 @@
             
             </summary>
         </member>
-        <member name="M:AtacadoApi.Controllers.RebanhoController.#ctor">
+        <member name="M:AtacadoApi.Controllers.RebanhoController.#ctor(Atacado.DB.EF.Database.ProjetoAcademiaContext)">
             <summary>
             
             </summary>
@@ -198,7 +198,7 @@
             
             </summary>
         </member>
-        <member name="M:AtacadoApi.Controllers.SubcategoriaController.#ctor">
+        <member name="M:AtacadoApi.Controllers.SubcategoriaController.#ctor(Atacado.DB.EF.Database.ProjetoAcademiaContext)">
             <summary>
             
             </summary>
@@ -256,7 +256,7 @@
             
             </summary>
         </member>
-        <member name="M:AtacadoApi.Controllers.TipoRebanhoController.#ctor">
+        <member name="M:AtacadoApi.Controllers.TipoRebanhoController.#ctor(Atacado.DB.EF.Database.ProjetoAcademiaContext)">
             <summary>
             
             </summary>

@@ -38,7 +38,7 @@ namespace Atacado.DB.EF.Database
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=psgs0071.psg.local; Initial Catalog=Academia; User=Academia; Password=@cadem1@555;");
+                //optionsBuilder.UseSqlServer("Data Source=psgs0071.psg.local; Initial Catalog=Academia; User=Academia; Password=@cadem1@555;");
             }
         }
 

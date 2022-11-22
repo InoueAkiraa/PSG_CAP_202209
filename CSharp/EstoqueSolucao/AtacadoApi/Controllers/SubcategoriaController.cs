@@ -6,6 +6,7 @@ using Atacado.Servico.Estoque;
 using System.Runtime.CompilerServices;
 using System.Collections.Generic;
 using System;
+using Atacado.DB.EF.Database;
 
 namespace AtacadoApi.Controllers
 {
@@ -22,9 +23,9 @@ namespace AtacadoApi.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public SubcategoriaController() : base()
+        public SubcategoriaController(ProjetoAcademiaContext context) : base()
         {
-            this.servico = new SubcategoriaServico();
+            this.servico = new SubcategoriaServico(context);
         }
 
         /// <summary>

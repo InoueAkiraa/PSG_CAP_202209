@@ -15,7 +15,7 @@ namespace Atacado.Repositorio.Base
 
         private DbSet<TDominio> table;
 
-        public GenericRepository()
+        public GenericRepository(ProjetoAcademiaContext context)
         {
             this.context = new ProjetoAcademiaContext();
             this.table = this.context.Set<TDominio>();
