@@ -9,7 +9,7 @@ using Clinica.Dominio.EF;
 using Clinica.Servico.Base;
 using System.Linq.Expressions;
 
-namespace Clinica.Servico
+namespace Clinica.Servico.Odonto
 {
     public class ConsultaServico : GenericService<Consulta, ConsultaPoco>
     {

@@ -10,7 +10,7 @@ using Clinica.Dominio.EF;
 using Clinica.Poco.Odonto;
 using System.Linq.Expressions;
 
-namespace Clinica.Servico
+namespace Clinica.Servico.Odonto
 {
     public class ProfissaoServico : GenericService<Profissao, ProfissaoPoco>
     {

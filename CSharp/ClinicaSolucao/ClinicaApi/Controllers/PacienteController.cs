@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 using Clinica.Dominio.EF;
 using Clinica.Poco.Odonto;
-using Clinica.Servico;
+using Clinica.Servico.Odonto;
 
 namespace ClinicaApi.Controllers
 {

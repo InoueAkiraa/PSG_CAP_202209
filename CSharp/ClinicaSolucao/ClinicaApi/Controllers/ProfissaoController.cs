@@ -1,5 +1,5 @@
 ﻿using Clinica.Dominio.EF;
-using Clinica.Servico;
+using Clinica.Servico.Odonto;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

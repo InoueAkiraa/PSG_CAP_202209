@@ -10,7 +10,7 @@ using Clinica.Dominio.EF;
 using Clinica.Poco.Odonto;
 using Clinica.Servico.Base;
 
-namespace Clinica.Servico
+namespace Clinica.Servico.Odonto
 {
     public class AgendaServico : GenericService<Agenda, AgendaPoco>
     {
