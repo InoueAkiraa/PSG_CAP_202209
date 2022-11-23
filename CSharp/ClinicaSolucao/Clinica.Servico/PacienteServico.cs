@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Clinica.Dominio.EF;
-using Clinica.Poco;
+using Clinica.Poco.Odonto;
 using Clinica.Servico.Base;
 
 namespace Clinica.Servico
@@ -49,6 +49,7 @@ namespace Clinica.Servico
             return query.Select(pac =>
                 new PacientePoco()
                 {
+                    CodigoPaciente = pac.CodigoPaciente,
                     Nome = pac.Nome,
                     Endereco = pac.Endereco,
                     Telefone = pac.Endereco,

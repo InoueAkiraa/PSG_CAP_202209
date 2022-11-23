@@ -10,9 +10,4 @@
     <PackageReference Include="AutoMapper" Version="12.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Clinica.Dominio.EF\Clinica.Dominio.EF.csproj" />
-    <ProjectReference Include="..\Clinica.Poco\Clinica.Poco.csproj" />
-  </ItemGroup>
-
 </Project>

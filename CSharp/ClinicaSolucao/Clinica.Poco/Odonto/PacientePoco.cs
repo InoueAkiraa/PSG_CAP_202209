@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace Clinica.Poco
+namespace Clinica.Poco.Odonto
 {
     public class PacientePoco
     {

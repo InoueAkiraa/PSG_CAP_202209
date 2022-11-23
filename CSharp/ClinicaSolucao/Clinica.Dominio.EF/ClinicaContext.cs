@@ -32,6 +32,18 @@ namespace Clinica.Dominio.EF
                 entity.Property(e => e.DataInclusao).HasDefaultValueSql("(getdate())");
             });
 
+            modelBuilder.Entity<Consulta>(entity =>
+            {
+                entity.Property(e => e.Situacao).HasDefaultValueSql("((1))");
+                entity.Property(e => e.DataInclusao).HasDefaultValueSql("(getdate())");
+            });
+
+            modelBuilder.Entity<Agenda>(entity =>
+            {
+                entity.Property(e => e.Situacao).HasDefaultValueSql("((1))");
+                entity.Property(e => e.DataInclusao).HasDefaultValueSql("(getdate())");
+            });
+
             OnModelCreatingPartial(modelBuilder);
         }
 

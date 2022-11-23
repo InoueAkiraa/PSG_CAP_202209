@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Clinica.Repositorio.Base
 {
-    public class GenericRepository<TDominio> : IGenericRepository<TDominio> where TDominio : class
+    public class GenericRepository<TDominio> where TDominio : class
     {
         private ClinicaContext contexto;
 
@@ -17,7 +17,7 @@ namespace Clinica.Repositorio.Base
 
         public GenericRepository(ClinicaContext contexto)
         {
-            this.contexto = new ClinicaContext();
+            this.contexto = contexto;
             this.table = this.contexto.Set<TDominio>();
         }
 

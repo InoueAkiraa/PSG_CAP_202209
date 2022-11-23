@@ -15,8 +15,8 @@ builder.Services.AddSwaggerGen(opcoes =>
     opcoes.SwaggerDoc("v1", new OpenApiInfo()
     {
         Version = "v1",
-        Title = "ToDo API",
-        Description = "An ASP.NET Core Web API for managing ToDo items",
+        Title = "Clinica API",
+        Description = "Web API desenvolvida com ASP.NET Core para gerenciar a Clinica",
         TermsOfService = new Uri("https://example.com/terms"),
         Contact = new OpenApiContact
         {
@@ -33,7 +33,7 @@ builder.Services.AddSwaggerGen(opcoes =>
     opcoes.IncludeXmlComments(filePath);
 });
 
-string str = builder.Configuration.GetConnectionString("Academia");
+string str = builder.Configuration.GetConnectionString("ClinicaDB");
 builder.Services.AddDbContext<ClinicaContext>(options => options.UseSqlServer(str));
 
 var app = builder.Build();
