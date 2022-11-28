@@ -10,6 +10,9 @@ namespace Clinica.Dominio.EF
     public partial class ClinicaContext : DbContext
     {
         public DbSet<Paciente> Pacientes { get; set; } = null!;
+        public DbSet<Profissao> Profissoes { get; set; } = null!;
+        public DbSet<Agenda> Agendas { get; set; } = null!;
+        public DbSet<Consulta> Consultas { get; set; } = null!;
         public ClinicaContext() : base()
         { }
 

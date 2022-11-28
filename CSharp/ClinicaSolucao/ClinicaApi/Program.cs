@@ -35,6 +35,7 @@ builder.Services.AddSwaggerGen(opcoes =>
 
 string str = builder.Configuration.GetConnectionString("ClinicaDB");
 builder.Services.AddDbContext<ClinicaContext>(options => options.UseSqlServer(str));
+//"Data Source=psgs0071.psg.local; Initial Catalog=ClinicaDB; User=Academia; Password=@cadem1@555;"
 
 var app = builder.Build();
 

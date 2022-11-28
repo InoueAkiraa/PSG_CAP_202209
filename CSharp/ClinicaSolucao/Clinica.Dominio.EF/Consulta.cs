@@ -24,7 +24,7 @@ namespace Clinica.Dominio.EF
         [Column(name: "Data", TypeName = "date")]
         public DateTime Data { get; set; }
 
-        [Column(name: "Hora", TypeName = "time")]
+        [Column(name: "Hora")] //, TypeName = "time"
         public DateTime Hora { get; set; }
 
         [Column(name: "DataHora", TypeName = "datetime")]
