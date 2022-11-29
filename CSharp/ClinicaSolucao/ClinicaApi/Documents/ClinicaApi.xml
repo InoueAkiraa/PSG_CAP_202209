@@ -119,6 +119,25 @@
             <param name="chave"></param>
             <returns></returns>
         </member>
+        <member name="T:ClinicaApi.Controllers.ExameController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ClinicaApi.Controllers.ExameController.#ctor(Clinica.Dominio.EF.ClinicaContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:ClinicaApi.Controllers.ExameController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros 
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
         <member name="T:ClinicaApi.Controllers.PacienteController">
             <summary>
             

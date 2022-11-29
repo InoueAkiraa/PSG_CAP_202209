@@ -52,7 +52,7 @@ namespace Clinica.Servico.Odonto
                     CodigoPaciente = pac.CodigoPaciente,
                     Nome = pac.Nome,
                     Endereco = pac.Endereco,
-                    Telefone = pac.Endereco,
+                    Telefone = pac.Telefone,
                     DataDeNascimento = pac.DataDeNascimento,
                     CodigoProfissao = pac.CodigoProfissao,
                     RG = pac.RG,

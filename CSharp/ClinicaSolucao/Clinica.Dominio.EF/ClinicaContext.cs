@@ -13,6 +13,8 @@ namespace Clinica.Dominio.EF
         public DbSet<Profissao> Profissoes { get; set; } = null!;
         public DbSet<Agenda> Agendas { get; set; } = null!;
         public DbSet<Consulta> Consultas { get; set; } = null!;
+
+        public DbSet<Servico> Servicos { get; set; } = null!;
         public ClinicaContext() : base()
         { }
 
@@ -42,6 +44,12 @@ namespace Clinica.Dominio.EF
             });
 
             modelBuilder.Entity<Agenda>(entity =>
+            {
+                entity.Property(e => e.Situacao).HasDefaultValueSql("((1))");
+                entity.Property(e => e.DataInclusao).HasDefaultValueSql("(getdate())");
+            });
+
+            modelBuilder.Entity<Servico>(entity =>
             {
                 entity.Property(e => e.Situacao).HasDefaultValueSql("((1))");
                 entity.Property(e => e.DataInclusao).HasDefaultValueSql("(getdate())");
