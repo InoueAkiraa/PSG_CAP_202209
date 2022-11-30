@@ -45,6 +45,32 @@ namespace Clinica.Repositorio.Base
             }
         }
 
+        public IQueryable<TDominio> Searchable(int? take = null, int? skip = null, Expression<Func<TDominio, bool>>? predicate = null)
+        {
+            if (skip == null)
+            {
+                if (predicate == null)
+                {
+                    return this.table;
+                }
+                else
+                {
+                    return this.table.Where(predicate);
+                }                
+            }
+            else
+            {
+                if (predicate == null)
+                {
+                    return this.table.Skip(skip.Value).Take(take.Value);
+                }
+                else
+                {
+                    return this.table.Where(predicate).Skip(skip.Value).Take(take.Value);
+                }                
+            }
+        }
+
         public TDominio? GetById(object id)
         {
             return this.table.Find(id);

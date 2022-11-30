@@ -32,12 +32,17 @@ namespace Clinica.Servico.Base
 
         public virtual List<TPoco> Listar(int? take = null, int? skip = null)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("Ajeita essa bagunça");
         }
 
         public virtual List<TPoco> Consultar(Expression<Func<TDominio, bool>>? predicate = null)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("Ajeita essa bagunça");
+        }
+
+        public virtual List<TPoco> Vasculhar(int? take = null, int? skip = null, Expression<Func<TDominio, bool>>? predicate = null)
+        {
+            throw new NotImplementedException("Ajeita essa bagunça");
         }
 
         public TPoco? PesquisarPorChave(object chave)

@@ -14,7 +14,7 @@ namespace ClinicaApi.Controllers
     /// </summary>
     [Route("api/clinica/[controller]")]
     [ApiController]
-    public class ExameController : ControllerBase
+    public class ProcedimentosController : ControllerBase
     {
         private ProcedimentosServico servico;
 
@@ -22,7 +22,7 @@ namespace ClinicaApi.Controllers
         /// 
         /// </summary>
         /// <param name="contexto"></param>
-        public ExameController(ClinicaContext contexto) : base() 
+        public ProcedimentosController(ClinicaContext contexto) : base()
         {
             this.servico = new ProcedimentosServico(contexto);
         }
@@ -30,16 +30,17 @@ namespace ClinicaApi.Controllers
         /// <summary>
         /// Retorna todos os registros que sejam do tipo Exame
         /// </summary>
+        /// <param name="tipoServico"></param>
         /// <param name="take"></param>
         /// <param name="skip"></param>
         /// <returns></returns>
-        [HttpGet]
-        public ActionResult<List<ServicoPoco>> GetAll(int? take = null, int? skip = null)
+        [HttpGet("{tipoServico}")]
+        public ActionResult<List<ServicoPoco>> GetAll(string tipoServico, int? take = null, int? skip = null)
         {
             try
             {
                 List<ServicoPoco> listaPoco;
-                var predicado = PredicateBuilder.New<Clinica.Dominio.EF.Servico>(true);                
+                var predicado = PredicateBuilder.New<Clinica.Dominio.EF.Servico>(true);
                 if (take == null)
                 {
                     if (skip != null)
@@ -48,7 +49,7 @@ namespace ClinicaApi.Controllers
                     }
                     else
                     {
-                        predicado = predicado.And(s => s.TipoServico == "EX");
+                        predicado = predicado.And(s => s.TipoServico == tipoServico);
                         listaPoco = this.servico.Consultar(predicado);
                         return Ok(listaPoco);
                     }
@@ -61,7 +62,7 @@ namespace ClinicaApi.Controllers
                     }
                     else
                     {
-                        predicado = predicado.And(s => s.TipoServico == "EX");
+                        predicado = predicado.And(s => s.TipoServico == tipoServico);
                         listaPoco = this.servico.Vasculhar(take, skip, predicado);
                         return Ok(listaPoco);
                     }
@@ -74,19 +75,20 @@ namespace ClinicaApi.Controllers
         }
 
         /// <summary>
-        /// Retorna o registro de acordo com a chave informada
+        /// Realiza a pesquisa tipo e pela chave informada
         /// </summary>
+        /// <param name="tipoServico"></param>
         /// <param name="chave"></param>
         /// <returns></returns>
-        [HttpGet("{chave:int}")]
-        public ActionResult<ServicoPoco> GetById(int chave)
+        [HttpGet("{tipoServico}/{chave:int}")]
+        public ActionResult<ServicoPoco> GetById(string tipoServico, int chave)
         {
             try
             {
                 List<ServicoPoco> listaPoco;
                 var predicado = PredicateBuilder.New<Clinica.Dominio.EF.Servico>(true);
-                predicado = predicado.And(s => s.TipoServico == "EX");
-                predicado = predicado.And(s => s.CodigoServico == chave);                
+                predicado = predicado.And(s => s.TipoServico == tipoServico);
+                predicado = predicado.And(s => s.CodigoServico == chave);
                 listaPoco = this.servico.Consultar(predicado);
                 return Ok(listaPoco);
             }

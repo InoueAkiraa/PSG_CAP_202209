@@ -1,20 +1,22 @@
 ﻿using Clinica.Dominio.EF;
-using Clinica.Poco.Odonto;
 using Clinica.Servico.Odonto;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Xml.Linq;
-
 using LinqKit;
+
+using Clinica.Poco.Odonto;
+
 
 namespace ClinicaApi.Controllers
 {
+    
     /// <summary>
     /// 
     /// </summary>
     [Route("api/clinica/[controller]")]
     [ApiController]
-    public class ExameController : ControllerBase
+    public class LimpezaRestauracaoController : ControllerBase
     {
         private ProcedimentosServico servico;
 
@@ -22,24 +24,24 @@ namespace ClinicaApi.Controllers
         /// 
         /// </summary>
         /// <param name="contexto"></param>
-        public ExameController(ClinicaContext contexto) : base() 
+        public LimpezaRestauracaoController(ClinicaContext contexto) : base()
         {
             this.servico = new ProcedimentosServico(contexto);
         }
 
         /// <summary>
-        /// Retorna todos os registros que sejam do tipo Exame
+        /// Retorna todos os registros que se qualificam como Limpeza e Restauração
         /// </summary>
         /// <param name="take"></param>
         /// <param name="skip"></param>
         /// <returns></returns>
-        [HttpGet]
+        [HttpGet] 
         public ActionResult<List<ServicoPoco>> GetAll(int? take = null, int? skip = null)
         {
             try
             {
                 List<ServicoPoco> listaPoco;
-                var predicado = PredicateBuilder.New<Clinica.Dominio.EF.Servico>(true);                
+                var predicado = PredicateBuilder.New<Clinica.Dominio.EF.Servico>(true);
                 if (take == null)
                 {
                     if (skip != null)
@@ -48,7 +50,7 @@ namespace ClinicaApi.Controllers
                     }
                     else
                     {
-                        predicado = predicado.And(s => s.TipoServico == "EX");
+                        predicado = predicado.And(s => s.TipoServico == "LR");
                         listaPoco = this.servico.Consultar(predicado);
                         return Ok(listaPoco);
                     }
@@ -61,7 +63,7 @@ namespace ClinicaApi.Controllers
                     }
                     else
                     {
-                        predicado = predicado.And(s => s.TipoServico == "EX");
+                        predicado = predicado.And(s => s.TipoServico == "LR");
                         listaPoco = this.servico.Vasculhar(take, skip, predicado);
                         return Ok(listaPoco);
                     }
@@ -74,7 +76,7 @@ namespace ClinicaApi.Controllers
         }
 
         /// <summary>
-        /// Retorna o registro de acordo com a chave informada
+        /// Retorna o registro de acordo com a chave primária informada.
         /// </summary>
         /// <param name="chave"></param>
         /// <returns></returns>
@@ -85,8 +87,8 @@ namespace ClinicaApi.Controllers
             {
                 List<ServicoPoco> listaPoco;
                 var predicado = PredicateBuilder.New<Clinica.Dominio.EF.Servico>(true);
-                predicado = predicado.And(s => s.TipoServico == "EX");
-                predicado = predicado.And(s => s.CodigoServico == chave);                
+                predicado = predicado.And(s => s.TipoServico == "LR");
+                predicado = predicado.And(s => s.CodigoServico == chave);
                 listaPoco = this.servico.Consultar(predicado);
                 return Ok(listaPoco);
             }
@@ -116,7 +118,7 @@ namespace ClinicaApi.Controllers
         }
 
         /// <summary>
-        /// Realiza alteração de um registro
+        /// Realiza a alteração de um registro
         /// </summary>
         /// <param name="poco"></param>
         /// <returns></returns>
@@ -135,7 +137,7 @@ namespace ClinicaApi.Controllers
         }
 
         /// <summary>
-        /// Realiza a exclusão de um registro
+        /// Exclui um registro pela chave primária
         /// </summary>
         /// <param name="chave"></param>
         /// <returns></returns>
