@@ -52,5 +52,13 @@ namespace Clinica.Dominio.EF
         [Column(name: "DataAlteracao", TypeName = "datetime")]
         public DateTime? DataAlteracao { get; set; }
 
+        [Column(name: "DenteExtraido")]
+        public int? DenteExtraido { get; set; }
+
+        [Column(name: "DenteCanalPar")]
+        public int? DenteCanalPar { get; set; }
+
+        [Column(name: "CodigoTipoServico")]
+        public int? CodigoTipoServico { get; set; }
     }
 }

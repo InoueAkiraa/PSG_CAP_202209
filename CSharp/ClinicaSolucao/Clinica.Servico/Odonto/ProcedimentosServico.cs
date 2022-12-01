@@ -88,7 +88,10 @@ namespace Clinica.Servico.Odonto
                    TipoExame = pro.TipoExame,
                    TipoServico = pro.TipoServico,
                    DenteTratado = pro.DenteTratado,
-                   MaterialUsado = pro.MaterialUsado
+                   MaterialUsado = pro.MaterialUsado,
+                   DenteExtraido = pro.DenteExtraido,
+                   DenteCanalPar = pro.DenteCanalPar,
+                   CodigoTipoServico = pro.CodigoTipoServico
                }).ToList();
         }
     }
