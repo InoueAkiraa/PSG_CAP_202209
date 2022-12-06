@@ -1,0 +1,1 @@
+Scripts referentes á criação do banco de dados, tabelas e inserção de dados.
