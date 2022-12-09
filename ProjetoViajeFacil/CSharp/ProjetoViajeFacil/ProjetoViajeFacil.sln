@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViajeFacil.Dominio.EF", "ViajeFacil.Dominio.EF\ViajeFacil.Dominio.EF.csproj", "{255EF9F1-BC25-4092-A95D-371ACFDF24CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViajeFacil.Poco", "ViajeFacil.Poco\ViajeFacil.Poco.csproj", "{6446C81B-B02A-4D7D-8C50-45E3C572FA42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViajeFacil.Repository", "ViajeFacil.Repository\ViajeFacil.Repository.csproj", "{35A42CFF-1A62-49ED-9BC9-332A5BEB8EBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViajeFacil.Service", "ViajeFacil.Service\ViajeFacil.Service.csproj", "{9670B5EB-5068-4594-936E-29AD2456D27E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViajeFacil.Mapping", "ViajeFacil.Mapping\ViajeFacil.Mapping.csproj", "{E00C2067-900C-4E68-815E-BBA355D11251}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViajeFacilApi", "ViajeFacilApi\ViajeFacilApi.csproj", "{FEBE272E-7D9B-4AC1-B8DE-544E704E6F4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{255EF9F1-BC25-4092-A95D-371ACFDF24CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{255EF9F1-BC25-4092-A95D-371ACFDF24CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{255EF9F1-BC25-4092-A95D-371ACFDF24CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{255EF9F1-BC25-4092-A95D-371ACFDF24CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6446C81B-B02A-4D7D-8C50-45E3C572FA42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6446C81B-B02A-4D7D-8C50-45E3C572FA42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6446C81B-B02A-4D7D-8C50-45E3C572FA42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6446C81B-B02A-4D7D-8C50-45E3C572FA42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35A42CFF-1A62-49ED-9BC9-332A5BEB8EBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A42CFF-1A62-49ED-9BC9-332A5BEB8EBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A42CFF-1A62-49ED-9BC9-332A5BEB8EBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A42CFF-1A62-49ED-9BC9-332A5BEB8EBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9670B5EB-5068-4594-936E-29AD2456D27E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9670B5EB-5068-4594-936E-29AD2456D27E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9670B5EB-5068-4594-936E-29AD2456D27E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9670B5EB-5068-4594-936E-29AD2456D27E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E00C2067-900C-4E68-815E-BBA355D11251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E00C2067-900C-4E68-815E-BBA355D11251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E00C2067-900C-4E68-815E-BBA355D11251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E00C2067-900C-4E68-815E-BBA355D11251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEBE272E-7D9B-4AC1-B8DE-544E704E6F4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEBE272E-7D9B-4AC1-B8DE-544E704E6F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEBE272E-7D9B-4AC1-B8DE-544E704E6F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEBE272E-7D9B-4AC1-B8DE-544E704E6F4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {189A1122-052A-48B0-86D0-28AD303127DE}
+	EndGlobalSection
+EndGlobal

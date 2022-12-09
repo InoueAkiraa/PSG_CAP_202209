@@ -1,0 +1,21 @@
+rua;numero;complemento;bairro;cep;id_cidade
+Rua Guararapes;162;Muro Amarelo;Coophamat;79092-200;5118
+Rua Quinze de Novembro;315;null;Vila Real;39404-410;2744
+Avenida Presidente Kubitschek;330;null;Centro;32600-226;2315
+Travessa Aldemiro;245;null;Pirajá;41297-020;2162
+Rua Rachid Handere;360;null;Bela Vista;39800-370;3049
+Rua Olívia Ferreira da Silva;246;null;Ebenezer;55640-824;1535
+Quadra QR 307 Conjunto M;86;null;Quadra QR 307 Conjunto M;72507-513;5564
+Rua Independência;45;null;Eldorado;69902-494;68
+Rua José Carlos Bruno;22;null;São José;63133-730;941
+Rua Ramiro Santos;11;null;Tarumã;69022-107;112
+Rua Gaspar;222;null;São Judas;88303-320;4437
+Loteamento Campo dos Palmares;98;null;Santos Dumont;57075-220;1696
+Rua Argus;10;null;Val-de-Cães;66115-381;170
+Rua Um;33;null;Beira Rio;64075-555;882
+Rua 5;44;null;Passaré;60744-380;949
+Travessa dos Abacateiros;8;null;Jardim Iguaçu;83210-033;4166
+Rua Gerânio;2;null;Jardim Colorado;29104-597;3173
+Rua José Rufino;5;null;Tabuleiro do Martins;57081-742;1696
+Rua Três;55;null;Águas Lindas;67020-400;161
+Rua Maurício Pereira;1082;null;Centro;57300-972;1652

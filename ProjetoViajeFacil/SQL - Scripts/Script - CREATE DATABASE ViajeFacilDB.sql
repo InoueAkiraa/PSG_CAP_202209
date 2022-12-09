@@ -1,0 +1,5 @@
+CREATE DATABASE ViajeFacilDB
+GO
+
+USE ViajeFacilDB
+GO

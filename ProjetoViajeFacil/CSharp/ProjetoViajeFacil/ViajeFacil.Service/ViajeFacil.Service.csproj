@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ViajeFacil.Dominio.EF\ViajeFacil.Dominio.EF.csproj" />
+    <ProjectReference Include="..\ViajeFacil.Mapping\ViajeFacil.Mapping.csproj" />
+    <ProjectReference Include="..\ViajeFacil.Poco\ViajeFacil.Poco.csproj" />
+    <ProjectReference Include="..\ViajeFacil.Repository\ViajeFacil.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

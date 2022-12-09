@@ -1,0 +1,7 @@
+CREATE TABLE rota(
+	id_rota BIGINT NOT NULL IDENTITY(1,1),
+	ponto_inicial VARCHAR(255) NOT NULL,
+	ponto_final VARCHAR(255) NOT NULL,
+	CONSTRAINT PK_Rota PRIMARY KEY (id_rota)
+)
+GO
