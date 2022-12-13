@@ -1,0 +1,25 @@
+1 - Verdadeiro, as afirmações informadas no texto estão de acordo com o pilar da Orientação a Objeto denominada Herança
+
+2 - Verdadeiro, o código apresentado aplica apenas o pilar de Herança e não do Polimorfismo. Pois a classe Candidato é herdada, porém o construtor deveria apresentar os atributos da classe pai.
+
+3 - Verdadeiro, pois era necessário o método "Calcular" possuir a palavra "abstract", assim é possível realizar o override nas classes filhas.
+
+4 - Verdadeiro, pois não é possível instanciar classes estáticas.
+
+5 - Verdadeiro 
+A - Falso, é possível estender outra classe utilizando apenas o conceito de Herança. Só seria possível atender aos conceitos de Métodos e Atributos se estendesse uma classe para outra, onde os atributos sejam protegidos e os métodos sejam públicos ou protegidos.
+B - Falso, pois é necessário que haja alguma relação entre as classes.
+C - Falso, os conceitos de Objeto e Classe estão trocados.
+D - Falso, invés de um Objeto se trata de uma Classe.
+E - Falso, pois quando uma propriedade não possui Get, é considerado somente para gravação.
+
+6 - Verdadeiro, pois foi informado no construtor da classe o atributo da classe pai.
+
+7 - Verdadeiro, pois está faltando as propriedades, e informar os atributos nos parâmetros do construtor, além de atribuir um valor para eles.
+
+8 - Verdadeiro, o código está semanticamente errado, pois a classe herdada não existe, mas caso existisse, não faz sentido o construtor das classes Passageiro e Funcionario não incluir os próprios atributos da classe, o restante dos atributos herdados está correto (caso não foi corrigido a classe BasePessoa).
+
+9 - Falso, pois o método Update tenta acessar as propriedades da classe Bilhete, porém a classe Bilhete não possui propriedades.
+
+10 - Falso, pois o método Edit devolve o Update passando uma chave como parâmetro sendo que deveria passar um Obj.chave.
+  
