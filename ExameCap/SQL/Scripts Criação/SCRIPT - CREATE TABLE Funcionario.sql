@@ -1,0 +1,13 @@
+CREATE TABLE Funcionario(
+	CodigoFuncionario INT IDENTITY(1,1) NOT NULL,
+	Nome VARCHAR(50) NOT NULL,
+	Email VARCHAR(50) NOT NULL,
+	Telefone VARCHAR(18) NOT NULL,
+	Usuario VARCHAR(50) NOT NULL,
+	Senha VARCHAR(50) NOT NULL,
+	Matricula VARCHAR(50) NOT NULL,
+	ContaCorrente VARCHAR(30) NOT NULL,		
+	DataNascimento DATETIME NOT NULL,
+	CONSTRAINT PK_Funcionario PRIMARY KEY (CodigoFuncionario)
+)
+GO

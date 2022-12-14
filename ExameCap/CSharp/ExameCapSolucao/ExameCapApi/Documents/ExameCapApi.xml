@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ExameCapApi</name>
+    </assembly>
+    <members>
+        <member name="T:ExameCapApi.Controllers.BilheteController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ExameCapApi.Controllers.BilheteController.#ctor(ExameCap.Dominio.EF.ExameCapContexto)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:ExameCapApi.Controllers.BilheteController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros da tabela Bilhete
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.BilheteController.GetByFuncionarioId(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com a chave primária informada
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.BilheteController.Post(ExameCap.Poco.BilhetePoco)">
+            <summary>
+            Realiza a criação de um registro através de uma instância
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.BilheteController.Put(ExameCap.Poco.BilhetePoco)">
+            <summary>
+            Realiza a alteração de um registro através de uma instância
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.BilheteController.DeleteById(System.Int32)">
+            <summary>
+            Realiza a exclusão de um registro de acordo com a chave primária informada
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ExameCapApi.Controllers.FuncionarioController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ExameCapApi.Controllers.FuncionarioController.#ctor(ExameCap.Dominio.EF.ExameCapContexto)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:ExameCapApi.Controllers.FuncionarioController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros da tabela Funcionario
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.FuncionarioController.GetByFuncionarioId(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com a chave primária informada
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.FuncionarioController.Post(ExameCap.Poco.PessoaPoco)">
+            <summary>
+            Realiza a criação de um registro através de uma instância
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.FuncionarioController.Put(ExameCap.Poco.PessoaPoco)">
+            <summary>
+            Realiza a alteração de um registro através de uma instância
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.FuncionarioController.DeleteById(System.Int32)">
+            <summary>
+            Realiza a exclusão de um registro de acordo com a chave primária informada
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ExameCapApi.Controllers.PassageiroController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ExameCapApi.Controllers.PassageiroController.#ctor(ExameCap.Dominio.EF.ExameCapContexto)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:ExameCapApi.Controllers.PassageiroController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros de Passageiro
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.PassageiroController.GetByFuncionarioId(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com a chave primária informada
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.PassageiroController.Post(ExameCap.Poco.PessoaPoco)">
+            <summary>
+            Realiza a criação de um registro através de uma instância
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.PassageiroController.Put(ExameCap.Poco.PessoaPoco)">
+            <summary>
+            Realiza a alteração de um registro através de uma instância
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ExameCapApi.Controllers.PassageiroController.DeleteById(System.Int32)">
+            <summary>
+            Realiza a exclusão de um registro de acordo com a chave primária informada
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

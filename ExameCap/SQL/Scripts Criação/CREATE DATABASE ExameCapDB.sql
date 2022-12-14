@@ -1,0 +1,5 @@
+CREATE DATABASE ExameCapDB
+GO
+
+USE ExameCapDB
+GO

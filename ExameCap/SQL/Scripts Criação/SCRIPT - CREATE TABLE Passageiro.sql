@@ -1,0 +1,13 @@
+CREATE TABLE Passageiro(
+	CodigoPassageiro INT IDENTITY(1,1) NOT NULL,
+	Nome VARCHAR(50) NOT NULL,
+	Email VARCHAR(50) NOT NULL,
+	Telefone VARCHAR(18) NOT NULL,
+	Usuario VARCHAR(50) NOT NULL,
+	Senha VARCHAR(50) NOT NULL,
+	Documento VARCHAR(20) NOT NULL,
+	NumeroCartao VARCHAR(30) NOT NULL,		
+	DataNascimento DATETIME NOT NULL,
+	CONSTRAINT PK_Passageiro PRIMARY KEY (CodigoPassageiro),
+)
+GO
