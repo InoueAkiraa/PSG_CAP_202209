@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>Documents\MedVetApi.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LinqKit.Core" Version="1.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Documents\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MedVet.Domain.EF\MedVet.Domain.EF.csproj" />
+    <ProjectReference Include="..\MedVet.Poco\MedVet.Poco.csproj" />
+    <ProjectReference Include="..\MedVet.Repository\MedVet.Repository.csproj" />
+    <ProjectReference Include="..\MedVet.Service\MedVet.Service.csproj" />
+  </ItemGroup>
+
+</Project>

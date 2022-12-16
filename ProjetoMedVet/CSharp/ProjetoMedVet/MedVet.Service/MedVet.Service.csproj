@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MedVet.Domain.EF\MedVet.Domain.EF.csproj" />
+    <ProjectReference Include="..\MedVet.Mapping\MedVet.Mapping.csproj" />
+    <ProjectReference Include="..\MedVet.Poco\MedVet.Poco.csproj" />
+    <ProjectReference Include="..\MedVet.Repository\MedVet.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

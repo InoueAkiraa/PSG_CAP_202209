@@ -1,23 +1,24 @@
-﻿using ExameCap.Dominio.EF;
-using ExameCap.Poco;
-using ExameCap.Service.Base;
+﻿using MedVet.Service.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExameCap.Service.Exame
+using MedVet.Domain.EF;
+using MedVet.Poco;
+using System.Linq.Expressions;
+
+namespace MedVet.Service.Veterinaria
 {
-    public class FuncionarioService : GenericService<Funcionario, PessoaPoco>
+    public class CidadeServico : ServicoGenerico<Cidade, CidadePoco>
     {
-        public FuncionarioService(ExameCapContexto contexto) : base(contexto)
+        public CidadeServico(MedVetContext contexto) : base(contexto)
         { }
 
-        public override List<PessoaPoco> Consultar(Expression<Func<Funcionario, bool>>? predicate = null)
+        public override List<CidadePoco> Consultar(Expression<Func<Cidade, bool>>? predicate = null)
         {
-            IQueryable<Funcionario> query;
+            IQueryable<Cidade> query;
             if (predicate == null)
             {
                 query = this.genrepo.Browseable(null);
@@ -29,9 +30,9 @@ namespace ExameCap.Service.Exame
             return this.ConverterPara(query);
         }
 
-        public override List<PessoaPoco> Listar(int? take = null, int? skip = null)
+        public override List<CidadePoco> Listar(int? take = null, int? skip = null)
         {
-            IQueryable<Funcionario> query;
+            IQueryable<Cidade> query;
             if (skip == null)
             {
                 query = this.genrepo.GetAll();
@@ -43,9 +44,9 @@ namespace ExameCap.Service.Exame
             return this.ConverterPara(query);
         }
 
-        public override List<PessoaPoco> Vasculhar(int? take = null, int? skip = null, Expression<Func<Funcionario, bool>>? predicate = null)
+        public override List<CidadePoco> Vasculhar(int? take = null, int? skip = null, Expression<Func<Cidade, bool>>? predicate = null)
         {
-            IQueryable<Funcionario> query;
+            IQueryable<Cidade> query;
             if (skip == null)
             {
                 if (predicate == null)
@@ -71,20 +72,15 @@ namespace ExameCap.Service.Exame
             return this.ConverterPara(query);
         }
 
-        public override List<PessoaPoco> ConverterPara(IQueryable<Funcionario> query)
+        public override List<CidadePoco> ConverterPara(IQueryable<Cidade> query)
         {
-            return query.Select(fun =>
-                new PessoaPoco()
+            return query.Select(cid =>
+                new CidadePoco()
                 {
-                    CodigoFuncionario = fun.CodigoFuncionario,  
-                    Nome = fun.Nome,
-                    Email = fun.Email,
-                    Telefone = fun.Telefone,
-                    Usuario = fun.Usuario,
-                    Senha = fun.Senha,
-                    Matricula = fun.Matricula,
-                    ContaCorrente = fun.ContaCorrente,                    
-                    DataNascimento = fun.DataNascimento
+                    CodigoCidade = cid.CodigoCidade,
+                    Nome = cid.Nome,
+                    CodigoIBGE7 = cid.CodigoIBGE7,
+                    CodigoEstado = cid.CodigoEstado
                 }).ToList();
         }
     }

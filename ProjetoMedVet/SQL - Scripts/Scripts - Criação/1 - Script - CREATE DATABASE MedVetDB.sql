@@ -1,0 +1,5 @@
+CREATE DATABASE MedVetDB
+GO
+
+USE MedVetDB
+GO

@@ -1,0 +1,731 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MedVetApi</name>
+    </assembly>
+    <members>
+        <member name="T:MedVetApi.Controllers.AtendenteController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendenteController.#ctor(MedVet.Domain.EF.MedVetContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendenteController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros em que as pessoas sejam atendentes.
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendenteController.GetBySexo(System.Char)">
+            <summary>
+            Retorna os registros de acordo com o sexo informado
+            </summary>
+            <param name="porSexo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendenteController.GetById(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com a chave informada
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendenteController.Post(MedVet.Poco.PessoaPoco)">
+            <summary>
+            Realiza a criação de um novo registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendenteController.Put(MedVet.Poco.PessoaPoco)">
+            <summary>
+            Realiza alteração de um registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendenteController.Delete(System.Int32)">
+            <summary>
+            Realiza a exclusão de um registro
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MedVetApi.Controllers.AtendimentoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendimentoController.#ctor(MedVet.Domain.EF.MedVetContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendimentoController.GetAll(System.Char,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros dependendo do atendimento informado.
+            </summary>
+            <param name="porTipoAtendimento"></param>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendimentoController.GetByTipoAtendimentoId(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com o código do tipo de atendimento informado.
+            </summary>
+            <param name="tipid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendimentoController.GetByAtendenteId(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com o código do Atendente informado.
+            </summary>
+            <param name="ateid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendimentoController.GetByPacienteId(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com o código do Paciente informado.
+            </summary>
+            <param name="pacid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendimentoController.GetByMedicoId(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com o código do Medico informado.
+            </summary>
+            <param name="medid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendimentoController.GetByEnfermeiroId(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com o código do Enfermeiro informado.
+            </summary>
+            <param name="enfid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendimentoController.GetByConvenioId(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com o código do Convenio informado.
+            </summary>
+            <param name="conid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendimentoController.GetById(System.Char,System.Int32)">
+            <summary>
+            Retorna o registro caso a chave primária e a sigla batem de acordo com os dados informados
+            </summary>
+            <param name="porTipoAtendimento"></param>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendimentoController.Post(MedVet.Poco.AtendimentoPoco)">
+            <summary>
+            Realiza a criação de um novo registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendimentoController.Put(MedVet.Poco.AtendimentoPoco)">
+            <summary>
+            Realiza alteração de um registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.AtendimentoController.Delete(System.Int32)">
+            <summary>
+            Realiza a exclusão de um registro
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MedVetApi.Controllers.CidadeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MedVetApi.Controllers.CidadeController.#ctor(MedVet.Domain.EF.MedVetContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:MedVetApi.Controllers.CidadeController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros existentes na tabela Cidade
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.CidadeController.GetByNome(System.String)">
+            <summary>
+            Retorna o registro de acordo com o nome informado
+            </summary>
+            <param name="porNome"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.CidadeController.GetByCodigoIBGE7(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com o código IBGE7 informado.
+            </summary>
+            <param name="ibge7"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.CidadeController.GetByEstadoId(System.Int32)">
+            <summary>
+            Retorna os registros de acordo com o código de Estado informado.
+            </summary>
+            <param name="estid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.CidadeController.GetById(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com a chave primária informada.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.CidadeController.Post(MedVet.Poco.CidadePoco)">
+            <summary>
+            Realiza a criação de um novo registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.CidadeController.Put(MedVet.Poco.CidadePoco)">
+            <summary>
+            Realiza alteração de um registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.CidadeController.Delete(System.Int32)">
+            <summary>
+            Realiza a exclusão de um registro
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MedVetApi.Controllers.ConvenioController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MedVetApi.Controllers.ConvenioController.#ctor(MedVet.Domain.EF.MedVetContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:MedVetApi.Controllers.ConvenioController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros existentes na tabela Convenio
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.ConvenioController.GetById(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com a chave primária informada.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.ConvenioController.Post(MedVet.Poco.ConvenioPoco)">
+            <summary>
+            Realiza a criação de um novo registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.ConvenioController.Put(MedVet.Poco.ConvenioPoco)">
+            <summary>
+            Realiza alteração de um registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.ConvenioController.Delete(System.Int32)">
+            <summary>
+            Realiza a exclusão de um registro
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MedVetApi.Controllers.EnderecoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MedVetApi.Controllers.EnderecoController.#ctor(MedVet.Domain.EF.MedVetContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:MedVetApi.Controllers.EnderecoController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros existentes na tabela Endereco
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EnderecoController.GetByCEP(System.String)">
+            <summary>
+            Retorna o registro de acordo com o CEP informado.
+            </summary>
+            <param name="porCEP"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EnderecoController.GetByCidadeId(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com o código de Cidade informado.
+            </summary>
+            <param name="cid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EnderecoController.GetById(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com a chave primária informada.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EnderecoController.Post(MedVet.Poco.EnderecoPoco)">
+            <summary>
+            Realiza a criação de um novo registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EnderecoController.Put(MedVet.Poco.EnderecoPoco)">
+            <summary>
+            Realiza alteração de um registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EnderecoController.Delete(System.Int32)">
+            <summary>
+            Realiza a exclusão de um registro
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MedVetApi.Controllers.EnfermeiraController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MedVetApi.Controllers.EnfermeiraController.#ctor(MedVet.Domain.EF.MedVetContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:MedVetApi.Controllers.EnfermeiraController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros em que as pessoas sejam enfermeiras.
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EnfermeiraController.GetBySexo(System.Char)">
+            <summary>
+            Retorna os registros de acordo com o sexo informado
+            </summary>
+            <param name="porSexo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EnfermeiraController.GetById(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com a chave informada
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EnfermeiraController.Post(MedVet.Poco.PessoaPoco)">
+            <summary>
+            Realiza a criação de um novo registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EnfermeiraController.Put(MedVet.Poco.PessoaPoco)">
+            <summary>
+            Realiza alteração de um registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EnfermeiraController.Delete(System.Int32)">
+            <summary>
+            Realiza a exclusão de um registro
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MedVetApi.Controllers.EstadoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MedVetApi.Controllers.EstadoController.#ctor(MedVet.Domain.EF.MedVetContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:MedVetApi.Controllers.EstadoController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros existentes na tabela Estado
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EstadoController.GetByNome(System.String)">
+            <summary>
+            Retorna o registro de acordo com o nome informado.
+            </summary>
+            <param name="nome"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EstadoController.GetBySiglaUF(System.String)">
+            <summary>
+            Retorna o registro de acordo com a Sigla UF informada.
+            </summary>
+            <param name="porSiglaUF"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EstadoController.GetById(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com a chave primária informada.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EstadoController.Post(MedVet.Poco.EstadoPoco)">
+            <summary>
+            Realiza a criação de um novo registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EstadoController.Put(MedVet.Poco.EstadoPoco)">
+            <summary>
+            Realiza alteração de um registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.EstadoController.Delete(System.Int32)">
+            <summary>
+            Realiza a exclusão de um registro
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MedVetApi.Controllers.MedicoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MedVetApi.Controllers.MedicoController.#ctor(MedVet.Domain.EF.MedVetContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:MedVetApi.Controllers.MedicoController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros em que as pessoas sejam médicas.
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.MedicoController.GetBySexo(System.Char)">
+            <summary>
+            Retorna os registros de acordo com o sexo informado
+            </summary>
+            <param name="porSexo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.MedicoController.GetById(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com a chave informada
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.MedicoController.Post(MedVet.Poco.PessoaPoco)">
+            <summary>
+            Realiza a criação de um novo registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.MedicoController.Put(MedVet.Poco.PessoaPoco)">
+            <summary>
+            Realiza alteração de um registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.MedicoController.Delete(System.Int32)">
+            <summary>
+            Realiza a exclusão de um registro
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MedVetApi.Controllers.PacienteController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MedVetApi.Controllers.PacienteController.#ctor(MedVet.Domain.EF.MedVetContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:MedVetApi.Controllers.PacienteController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros em que as pessoas sejam pacientes.
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.PacienteController.GetBySexo(System.Char)">
+            <summary>
+            Retorna os registros de acordo com o sexo informado
+            </summary>
+            <param name="porSexo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.PacienteController.GetById(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com a chave informada
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.PacienteController.Post(MedVet.Poco.PessoaPoco)">
+            <summary>
+            Realiza a criação de um novo registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.PacienteController.Put(MedVet.Poco.PessoaPoco)">
+            <summary>
+            Realiza alteração de um registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.PacienteController.Delete(System.Int32)">
+            <summary>
+            Realiza a exclusão de um registro
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MedVetApi.Controllers.PessoaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MedVetApi.Controllers.PessoaController.#ctor(MedVet.Domain.EF.MedVetContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:MedVetApi.Controllers.PessoaController.GetAll(System.Char,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros dependendo da função informada.
+            </summary>
+            <param name="porFuncao"></param>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.PessoaController.GetBySexo(System.Char,System.Char)">
+            <summary>
+            Retorna os registros de acordo com o sexo e a função informada
+            </summary>
+            <param name="porSexo"></param>
+            /// <param name="porFuncao"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.PessoaController.GetByTipoPessoaId(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com o código de TipoPessoa informado.
+            </summary>
+            <param name="tipid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.PessoaController.GetByEnderecoId(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com o código de Endereço informado.
+            </summary>
+            <param name="endid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.PessoaController.GetById(System.Char,System.Int32)">
+            <summary>
+            Retorna o registro caso a chave primária e a sigla batem de acordo com os dados informados
+            </summary>
+            <param name="porFuncao"></param>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.PessoaController.Post(MedVet.Poco.PessoaPoco)">
+            <summary>
+            Realiza a criação de um novo registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.PessoaController.Put(MedVet.Poco.PessoaPoco)">
+            <summary>
+            Realiza alteração de um registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.PessoaController.Delete(System.Int32)">
+            <summary>
+            Realiza a exclusão de um registro
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MedVetApi.Controllers.TipoAtendimentoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MedVetApi.Controllers.TipoAtendimentoController.#ctor(MedVet.Domain.EF.MedVetContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:MedVetApi.Controllers.TipoAtendimentoController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros existentes na tabela TipoAtendimento
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.TipoAtendimentoController.GetBySiglaTipoPessoa(System.Char)">
+            <summary>
+            Retorna o registro de acordo com a sigla informada
+            </summary>
+            <param name="sigla"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.TipoAtendimentoController.GetById(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com a chave primária informada.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.TipoAtendimentoController.Post(MedVet.Poco.TipoAtendimentoPoco)">
+            <summary>
+            Realiza a criação de um novo registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.TipoAtendimentoController.Put(MedVet.Poco.TipoAtendimentoPoco)">
+            <summary>
+            Realiza alteração de um registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.TipoAtendimentoController.Delete(System.Int32)">
+            <summary>
+            Realiza a exclusão de um registro
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MedVetApi.Controllers.TipoPessoaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MedVetApi.Controllers.TipoPessoaController.#ctor(MedVet.Domain.EF.MedVetContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:MedVetApi.Controllers.TipoPessoaController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros existentes na tabela TipoPessoa
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.TipoPessoaController.GetBySiglaTipoPessoa(System.Char)">
+            <summary>
+            Retorna o registro de acordo com a sigla informada
+            </summary>
+            <param name="sigla"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.TipoPessoaController.GetById(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com a chave primária informada.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.TipoPessoaController.Post(MedVet.Poco.TipoPessoaPoco)">
+            <summary>
+            Realiza a criação de um novo registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.TipoPessoaController.Put(MedVet.Poco.TipoPessoaPoco)">
+            <summary>
+            Realiza alteração de um registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MedVetApi.Controllers.TipoPessoaController.Delete(System.Int32)">
+            <summary>
+            Realiza a exclusão de um registro
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
