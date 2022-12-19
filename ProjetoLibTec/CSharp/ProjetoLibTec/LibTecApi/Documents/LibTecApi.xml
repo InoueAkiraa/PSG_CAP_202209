@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LibTecApi</name>
+    </assembly>
+    <members>
+        <member name="T:LibTecApi.Controllers.ItemController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LibTecApi.Controllers.ItemController.#ctor(LibTec.Domain.EF.LibTecContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:LibTecApi.Controllers.ItemController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros da tabela Item, respeitando parâmetros Take e Skip
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ItemController.GetByCodigoISBN(System.String)">
+            <summary>
+            Retorna o registro de acordo com o código ISBN informado. (Exige modificações no banco de dados para o funcionamento)
+            </summary>
+            <param name="porCodigoISBN"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ItemController.GetByTipoItemId(System.Int32)">
+            <summary>
+            Retorna os registros de acordo com o código de TipoItem informado.
+            </summary>
+            <param name="tipid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ItemController.GetById(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com o código da chave primária informada.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ItemController.Post(LibTec.Poco.ItemPoco)">
+            <summary>
+            Realiza a criação de um novo registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ItemController.Put(LibTec.Poco.ItemPoco)">
+            <summary>
+            Realiza a alteração de um registro existente.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ItemController.Delete(System.Int32)">
+            <summary>
+            Realiza a exclusao de um registro existente de acordo com a chave primária informada.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LibTecApi.Controllers.ReservaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LibTecApi.Controllers.ReservaController.#ctor(LibTec.Domain.EF.LibTecContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:LibTecApi.Controllers.ReservaController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros da tabela Reserva, respeitando os parâmetros Take e Skip.
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ReservaController.GetByUsuarioId(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com o código de usuário informado.
+            </summary>
+            <param name="usuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ReservaController.GetByItemId(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com o código de Item informado.
+            </summary>
+            <param name="iteid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ReservaController.GetByStatusReservaId(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com o código do status da Reserva informado.
+            </summary>
+            <param name="staid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ReservaController.GetById(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com a chave primária informada.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ReservaController.Post(LibTec.Poco.ReservaPoco)">
+            <summary>
+            Realiza a criação de um novo registro
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ReservaController.Put(LibTec.Poco.ReservaPoco)">
+            <summary>
+            Realiza a alteração de um registro existente.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.ReservaController.Delete(System.Int32)">
+            <summary>
+            Realiza a exclusao de um registro existente de acordo com a chave primária informada.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LibTecApi.Controllers.UsuarioController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LibTecApi.Controllers.UsuarioController.#ctor(LibTec.Domain.EF.LibTecContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:LibTecApi.Controllers.UsuarioController.GetAll(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Retorna todos os registros da tabela Usuario, respeitando parâmetros Take e Skip.
+            </summary>
+            <param name="take"></param>
+            <param name="skip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.UsuarioController.GetByNomeSobrenome(System.String,System.String)">
+            <summary>
+            Retorna o registro de acordo com o nome e o sobrenome informados.
+            </summary>
+            <param name="porNome"></param>
+            <param name="porSobrenome"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.UsuarioController.GetByEmail(System.String)">
+            <summary>
+            Retorna o registro de acordo com o e-mail informado.
+            </summary>
+            <param name="porEmail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.UsuarioController.GetByTipoUsuarioId(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com o código de TipoUsuario solicitado.
+            </summary>
+            <param name="tipid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.UsuarioController.GetById(System.Int32)">
+            <summary>
+            Retorna o registro de acordo com o código da chave primária informada.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.UsuarioController.Post(LibTec.Poco.UsuarioPoco)">
+            <summary>
+            Realiza a criação de um novo registro.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.UsuarioController.Put(LibTec.Poco.UsuarioPoco)">
+            <summary>
+            Realiza a alteração de um registro existente.
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibTecApi.Controllers.UsuarioController.Delete(System.Int32)">
+            <summary>
+            Realiza a exclusao de um registro existente de acordo com a chave primária informada.
+            </summary>
+            <param name="chave"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
