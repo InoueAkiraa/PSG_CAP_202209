@@ -16,7 +16,7 @@ namespace LibTec.Service.Base
         where TDominio : class
         where TPoco : class
     {
-        protected IRepositorioGenerico<TDominio> genrepo;
+        protected RepositorioGenerico<TDominio> genrepo;
         protected MapeamentoGenerico<TDominio, TPoco> genmap;
 
         public ServicoGenerico(LibTecContext contexto)
