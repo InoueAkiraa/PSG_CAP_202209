@@ -1,0 +1,1 @@
+Tentativa de realizar uma "box" onde vai apresentar a foto do funcionário e em seguida apresentar suas capacidades através de "cards".
