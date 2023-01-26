@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avaliar.Domain.EF", "Avaliar.Domain.EF\Avaliar.Domain.EF.csproj", "{D3EAA00D-6144-4FA3-A1D4-08507B2231C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avaliar.Poco", "Avaliar.Poco\Avaliar.Poco.csproj", "{334EF60A-498C-412F-B716-A0D53C18FAF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avaliar.Repository", "Avaliar.Repository\Avaliar.Repository.csproj", "{684CB3D8-0ED5-4CB1-B177-166EB9E579CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avaliar.Service", "Avaliar.Service\Avaliar.Service.csproj", "{65E4F01B-EC04-4D47-8D61-011F0CDAFFB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avaliar.Mapping", "Avaliar.Mapping\Avaliar.Mapping.csproj", "{18BF270E-2B06-49B2-9211-6BC6F44A89AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaliarApi", "AvaliarApi\AvaliarApi.csproj", "{2422C27C-70B8-467C-A575-95F46E4F5733}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avaliar.Envelope", "Avaliar.Envelope\Avaliar.Envelope.csproj", "{14F65307-1600-4D65-86F4-0849E9F0138D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3EAA00D-6144-4FA3-A1D4-08507B2231C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3EAA00D-6144-4FA3-A1D4-08507B2231C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3EAA00D-6144-4FA3-A1D4-08507B2231C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3EAA00D-6144-4FA3-A1D4-08507B2231C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{334EF60A-498C-412F-B716-A0D53C18FAF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{334EF60A-498C-412F-B716-A0D53C18FAF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{334EF60A-498C-412F-B716-A0D53C18FAF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{334EF60A-498C-412F-B716-A0D53C18FAF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{684CB3D8-0ED5-4CB1-B177-166EB9E579CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{684CB3D8-0ED5-4CB1-B177-166EB9E579CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{684CB3D8-0ED5-4CB1-B177-166EB9E579CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{684CB3D8-0ED5-4CB1-B177-166EB9E579CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65E4F01B-EC04-4D47-8D61-011F0CDAFFB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65E4F01B-EC04-4D47-8D61-011F0CDAFFB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65E4F01B-EC04-4D47-8D61-011F0CDAFFB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65E4F01B-EC04-4D47-8D61-011F0CDAFFB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18BF270E-2B06-49B2-9211-6BC6F44A89AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18BF270E-2B06-49B2-9211-6BC6F44A89AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18BF270E-2B06-49B2-9211-6BC6F44A89AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18BF270E-2B06-49B2-9211-6BC6F44A89AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2422C27C-70B8-467C-A575-95F46E4F5733}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2422C27C-70B8-467C-A575-95F46E4F5733}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2422C27C-70B8-467C-A575-95F46E4F5733}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2422C27C-70B8-467C-A575-95F46E4F5733}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F65307-1600-4D65-86F4-0849E9F0138D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F65307-1600-4D65-86F4-0849E9F0138D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F65307-1600-4D65-86F4-0849E9F0138D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F65307-1600-4D65-86F4-0849E9F0138D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C14EACCA-F403-4153-9308-F3AB7F5EA8C4}
+	EndGlobalSection
+EndGlobal

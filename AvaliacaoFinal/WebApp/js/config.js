@@ -1,0 +1,1 @@
+var servidor = "https://localhost:7290/api/supermercado";
