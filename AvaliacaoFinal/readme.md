@@ -18,16 +18,16 @@ Frameworks como AutoMapper, LINQKIT e o Newtonsoft Json.</p>
 <br>  
   
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-Fizemos uso do GitHub Desktop para aprendermos como se trabalha em equipe quando envolve controle de versionamento.
+<p>Fizemos uso do GitHub Desktop para aprendermos como se trabalha em equipe quando envolve controle de versionamento.</p>
 <br>
 
 ![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
-Utilizamos o swagger para testar as funcionalidades da nossa API.
+<p>Utilizamos o swagger para testar as funcionalidades da nossa API.</p>
 <br>
 
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-Também aprendemos como utilizar o Postman no lugar do Swagger, assim podíamos obter as mesmas consultas do swagger porém era possível gerar uma documentação
-com todos os registros utilizados.
+<p>Também aprendemos como utilizar o Postman no lugar do Swagger, assim podíamos obter as mesmas consultas do swagger porém era possível gerar uma documentação
+com todos os registros utilizados.</p>
 <br>
 
 ![image](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -35,7 +35,7 @@ com todos os registros utilizados.
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![image](	https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 <br>
-No Front-End fizemos uso do HTML5 para montar o layout das nossas páginas, CSS3 era responsável por adicionar "efeitos" para determinadas funcionalidades, 
-JS - Jquery foi utilizado para realizar comunicações com a API e para determinados eventos onChange, e o BootStrap 4 foi usado para facilitar nas montagens dos layouts, pois já possuem funcionalidades e marcações pré-determinadas.
+<p>No Front-End fizemos uso do HTML5 para montar o layout das nossas páginas, CSS3 era responsável por adicionar "efeitos" para determinadas funcionalidades, 
+JS - Jquery foi utilizado para realizar comunicações com a API e para determinados eventos onChange, e o BootStrap 4 foi usado para facilitar nas montagens dos layouts, pois já possuem funcionalidades e marcações pré-determinadas.</p>
 <br>
 
