@@ -2,7 +2,7 @@ function alterar(){
     var codigoCategoria = $("#txtCodigoCategoria").val();
     var descricao = $("#txtDescricao").val();    
     var ativo = $("#chbAtivo").prop('checked');
-    var dataInclusao = $("#txtDataInclusao").val();    
+    var dataInclusao = $("#datDataInclusao").val();    
     
     var novo = {
         codigoCategoria,

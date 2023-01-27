@@ -9,7 +9,6 @@ $(function(){
         $("#btnAlterar").hide();
         $("#btnExcluir").hide();
         $("#divInclusaoTexto").hide();
-        $("#chbAtivo").attr('disabled', true);
     }
 
     if (acao == 1){
@@ -34,7 +33,6 @@ $(function(){
        somenteLeitura();
        $("#btnNovo").hide();
        $("#btnAlterar").hide();
-       $("#chbAtivo").attr('disabled', true);
     }
 });
 
@@ -42,8 +40,8 @@ function somenteLeitura(){
     $("#txtCodigoProduto").attr('readonly',true);
     $("#txtCodigoCategoria").attr('readonly',true);
     $("#txtDescricao").attr('readonly',true);
-    $("#txtDataInclusao").attr('readonly', true);
     $("#datDataInclusao").attr('readonly', true);
+    $("#chbAtivo").attr('disabled', true);
 }
 
 function carregarDetalhe(){

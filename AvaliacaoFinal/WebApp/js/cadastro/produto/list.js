@@ -24,6 +24,9 @@ $(function(){
       caminhoEnvelope = caminho + "/envelope/PorCategoria/" +codigoCategoria + "?limite=" + limite + "&salto=" + salto;
       carregar(caminhoEnvelope);
     }
+    else{
+      alert("Informe uma Categoria para realizar a pesquisa.")
+    }
   });
 });
 

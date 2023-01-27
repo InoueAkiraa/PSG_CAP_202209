@@ -1,5 +1,4 @@
 var codigo = 0;
-
 $(function(){
     avaliarAcao('categoriaAcao');
     if (acao == 0){
@@ -7,8 +6,7 @@ $(function(){
         somenteLeitura();    
         $("#btnNovo").hide();  
         $("#btnAlterar").hide();
-        $("#btnExcluir").hide();  
-        $("#chbAtivo").attr('disabled', true);
+        $("#btnExcluir").hide();          
     }
     
     if (acao == 1){
@@ -33,7 +31,6 @@ $(function(){
         somenteLeitura();
         $("#btnNovo").hide();  
         $("#btnAlterar").hide();
-        $("#chbAtivo").attr('disabled', true);
     }
 });
 
@@ -41,7 +38,8 @@ function somenteLeitura(){
     $("#txtCodigoCategoria").attr('readonly', true);
     $("#txtDescricao").attr('readonly', true);
     $("#txtAtivo").attr('readonly', true);
-    $("#txtDataInclusao").attr('readonly', true);
+    $("#datDataInclusao").attr('readonly', true);
+    $("#chbAtivo").attr('disabled', true);
 }
 
 function carregarDetalhe(){
@@ -68,7 +66,7 @@ function carregarDetalhe(){
             $("#txtCodigoCategoria").val(data.codigoCategoria);
             $("#txtDescricao").val(data.descricao)        
             $("#txtAtivo").val(data.ativo);
-            $("#txtDataInclusao").val(data.dataInclusao.substring(0,10));                        
+            $("#datDataInclusao").val(data.dataInclusao.substring(0,10));                        
             $("#chbAtivo").attr('checked', (stringToBoolean(data.ativo)));
         }
     });
