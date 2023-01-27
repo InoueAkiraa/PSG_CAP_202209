@@ -1,7 +1,7 @@
 <h1 align="center">Projeto Avaliar</h1>
 
 ## Descrição do Projeto
-<p align="center">Projeto usado como avaliação final no curso de capacitação da empresa PSG (Pessoas Sistemas e Gestão) 
+<p>Projeto usado como avaliação final no curso de capacitação da empresa PSG (Pessoas Sistemas e Gestão) 
 onde recebemos treinamento no banco de dados utilizando SQL Server, desenvolvimento do Back-End utilizando C#. 
 No Front-End fizemos uso do HTML5, CSS3, JS - Jquery e BootStrap 4. O capacitador responsável por lecionar foi o professor Luiz Augusto.</p>
 <br>
