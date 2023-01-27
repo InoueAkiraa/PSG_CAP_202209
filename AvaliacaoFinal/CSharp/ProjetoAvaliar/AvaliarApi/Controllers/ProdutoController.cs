@@ -231,8 +231,8 @@ namespace AvaliarApi.Controllers
             {
                 List<ProdutoEnvelope> listaEnvelope = listaPoco.Select(pro => new ProdutoEnvelope(pro)).ToList();
                 listaEnvelope.ForEach(item => item.SetLinks());
-                string erro = "Limite não pode ser maior do que a quantidade de Registros.";
-                list = new ListEnvelope<ProdutoEnvelope>(listaEnvelope, 400, erro, linkPost, "1.0");
+                string erro = "A quantidade de registros solicitada não pode ser maior do que a quantidade total de Registros existentes." + "[" + totalReg +"]";
+                list = new ListEnvelope<ProdutoEnvelope>(null, 400, erro, linkPost, "1.0");
                 return Ok(list.Etapa);
             }
             else
@@ -242,7 +242,7 @@ namespace AvaliarApi.Controllers
 
                 if (listaPoco.Count() == 0)
                 {
-                    list = new ListEnvelope<ProdutoEnvelope>(listaEnvelope, 404, "Não existem mais registros a serem mostrados!.", linkPost, "1.0");
+                    list = new ListEnvelope<ProdutoEnvelope>(null, 404, "Não existem mais registros a serem mostrados!", linkPost, "1.0");
                     return Ok(list.Etapa);
                 }
 

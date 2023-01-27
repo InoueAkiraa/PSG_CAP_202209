@@ -2,7 +2,7 @@ function excluir(){
     var codigoCategoria = $("#txtCodigoCategoria").val();   
     var caminhoDelete = caminho + '/' + codigo;
 
-    $.ajax({
+    $.ajax({        
         url: caminhoDelete,
         type: "delete",
         dataType: "json",

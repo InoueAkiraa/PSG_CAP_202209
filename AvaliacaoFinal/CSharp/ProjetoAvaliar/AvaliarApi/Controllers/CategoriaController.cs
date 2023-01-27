@@ -187,7 +187,7 @@ namespace AvaliarApi.Controllers
 
                 if (listaPoco.Count() == 0)
                 {
-                    list = new ListEnvelope<CategoriaEnvelope>(listaEnvelope, 404, "Não existem mais registros a serem mostrados!.", linkPost, "1.0");
+                    list = new ListEnvelope<CategoriaEnvelope>(listaEnvelope, 404, "Não existem mais registros a serem mostrados!", linkPost, "1.0");
                     return Ok(list.Etapa);
                 }
 

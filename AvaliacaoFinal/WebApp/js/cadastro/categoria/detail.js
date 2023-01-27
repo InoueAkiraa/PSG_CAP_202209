@@ -23,9 +23,7 @@ $(function(){
     if (acao == 2){
         carregarDetalhe();
         $("#txtCodigoCategoria").attr('readonly', true);
-        $("#txtDataInclusao").attr('readonly', true); 
-        $("#lblAtivo").hide();
-        $("#txtAtivo").hide();
+        $("#divInclusao").hide();
         $("#btnNovo").hide(); 
         $("#btnExcluir").hide();  
     }
@@ -61,7 +59,7 @@ function carregarDetalhe(){
     var caminhoComValor = caminho + '/' + codigo;
     
     $.get(caminhoComValor, function(data, status){
-        if (data.length == 0){
+        if (data.length == 0){            
             alert("Erro ao obter os dados.")
             return;
         }

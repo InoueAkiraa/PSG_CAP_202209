@@ -13,7 +13,7 @@ function cadastrar(){
 
     console.log(novo);
 
-    $.ajax({
+    $.ajax({        
         url: caminho,
         type: "post",
         dataType: "json",
@@ -21,7 +21,7 @@ function cadastrar(){
         contentType: "application/json",
         success: function(data, status, xhr){
             console.log(data);
-            codigoProjeto = data.codigoProjeto;
+            codigoCategoria = data.codigoCategoria;
             alert("Dados gravados com sucesso. [CodigoCategoria = " + codigoCategoria + "]");
             window.location.href = "list.html";
         },
