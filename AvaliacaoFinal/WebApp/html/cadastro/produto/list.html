@@ -5,34 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliar App - Cadastro - Produto - Listar</title>    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>    
 
     <script src="../../../js/config.js"></script>
     <script src="../../../js/cadastro/cadastro.js"></script>
     <script src="../../../js/cadastro/produto/config.js"></script>
     <script src="../../../js/cadastro/produto/list.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 </head>
 <body class="bg-secondary">
     <div class="container pt-4 my-5 card text-black">
         <div>
             <button id="btnNovo" name="btnNovo" class="btn-dark" onclick="cadastrarNovo()">Novo Registro</button>
+            <a href="../index.html"><button id="btnVoltarIndex" name="btnVoltarIndex" class="btn-dark float-right">Voltar Para o Menu de Cadastro</button></a> 
         </div>
         <div class="my-2">
-                <select class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" id="ddlCategoria">
-                    <option value="0">Selecione a Categoria do Produto</option>                     
-                </select>  
+            <select class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" id="ddlCategoria">
+                <option value="0">Selecione a Categoria do Produto</option>                     
+            </select>  
 
-                <select class="btn btn-dark dropdown-toggle float-right" type="button" data-toggle="dropdown" id="ddlTakeSkip">
-                    <option value="0">Selecione a Quantidade de Registros Desejada</option>  
-                    <option>10</option>    
-                    <option>20</option>    
-                    <option>50</option> 
-                    <option>100</option> 
-                    <option>150</option>                
-                </select>  
+            <select class="btn btn-dark dropdown-toggle float-right" type="button" data-toggle="dropdown" id="ddlTakeSkip">
+                <option value="0">Selecione a Quantidade de Registros Desejada</option>  
+                <option>10</option>    
+                <option>20</option>    
+                <option>50</option> 
+                <option>100</option> 
+                <option>150</option>                
+            </select>  
         </div>
         <div>
             <table id="tblDados" class="table table-bordered table-hover">
@@ -54,7 +56,7 @@
             <ul class="pagination justify-content-center">
               
             </ul>
-          </nav>
+        </nav>
     </div>
 </body>
 </html>

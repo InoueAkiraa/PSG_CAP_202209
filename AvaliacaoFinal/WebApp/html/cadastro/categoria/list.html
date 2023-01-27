@@ -5,23 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliar App - Cadastro - Categoria - Listar</title>    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>    
 
     <script src="../../../js/config.js"></script>
     <script src="../../../js/cadastro/cadastro.js"></script>
     <script src="../../../js/cadastro/categoria/config.js"></script>
     <script src="../../../js/cadastro/categoria/list.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 </head>
 <body class="bg-secondary">
     <div class="container pt-4 my-5 card text-black">
         <div>
-            <button id="btnNovo" name="btnNovo" class="btn-dark" onclick="cadastrarNovo()">Novo Registro</button>
+            <a href="../index.html">
+                <button id="btnVoltarIndex" name="btnVoltarIndex" class="btn-dark">Voltar Para o Menu de Cadastro</button>
+            </a> 
         </div>
         <div class="my-2">
-            <select class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" id="ddlTakeSkip">
+            <button id="btnNovo" name="btnNovo" class="btn-dark my-1" onclick="cadastrarNovo()">Novo Registro</button>            
+            
+            <select class="btn btn-dark dropdown-toggle float-right" type="button" data-toggle="dropdown" id="ddlTakeSkip">
                 <option value="0">Selecione a Quantidade de Registros Desejada</option>  
                 <option>5</option>    
                 <option>10</option> 
